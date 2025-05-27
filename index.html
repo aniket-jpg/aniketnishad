@@ -3,106 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniFlow Tech Solutions - IT Services</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AniFlow Tech Solutions - Innovative IT Services</title>
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header id="main-header">
         <div class="container">
             <div id="logo">
-                <!-- Using the new logo URL you provided -->
-                <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech Solutions Logo">
+                <a href="#hero"> <!-- Make logo clickable to go to top -->
+                    <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech Solutions Logo">
+                </a>
             </div>
-            <nav>
+            <nav id="navbar">
                 <ul>
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button id="menu-toggle" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
         </div>
     </header>
 
-    <section id="hero">
-        <div class="container">
-            <h1>Innovative Tech Solutions for Your Business Growth</h1>
-            <p>We streamline your processes and boost your online presence with custom web applications and strategic digital marketing.</p>
-            <a href="#contact" class="btn">Get a Free Quote</a>
-        </div>
-    </section>
+    <main>
+        <section id="hero">
+            <div class="hero-content container">
+                <h1>Empowering Your Business with <span class="highlight">Cutting-Edge</span> Tech</h1>
+                <p class="subtitle">Custom web applications and strategic digital marketing to streamline your operations and amplify your reach.</p>
+                <a href="#contact" class="btn btn-primary">Request a Consultation</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </section>
 
-    <section id="services" class="section-padding">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service-item">
-                    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Web Application Development">
-                    <h3>Custom Web Applications</h3>
-                    <p>We design and develop end-to-end web applications tailored to your organization's unique needs, streamlining processes and enhancing efficiency.</p>
-                </div>
-                <div class="service-item">
-                    <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Digital Marketing">
-                    <h3>Digital Marketing</h3>
-                    <p>Amplify your brand's reach with our comprehensive digital marketing strategies, including SEO, content marketing, social media, and paid advertising.</p>
+        <section id="services" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-intro">Tailored solutions designed to drive growth and efficiency.</p>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Custom Web Applications</h3>
+                        <p>End-to-end development of scalable and robust web applications, built to your specific requirements for seamless process automation.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3>Digital Marketing</h3>
+                        <p>Comprehensive digital marketing strategies, including SEO, SMM, and content creation, to elevate your brand and engage your target audience effectively.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Process Streamlining</h3>
+                        <p>Analyzing your existing workflows and implementing tech solutions to optimize operations, reduce overhead, and improve productivity.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="section-padding bg-light">
-        <div class="container">
-            <h2>About AniFlow Tech Solutions</h2>
-            <p>At AniFlow Tech Solutions, we are passionate about leveraging technology to solve complex business challenges. Our mission is to provide innovative and reliable IT solutions that empower organizations to achieve their goals. We focus on understanding your specific requirements to deliver services that truly make a difference.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p class="contact-intro">We'd love to hear from you! Whether you have a question about our services or want to discuss a project, feel free to reach out.</p>
-            <div class="contact-content">
-                <div class="contact-form">
-                    <h3>Send us a Message</h3>
-                    <!-- IMPORTANT: Replace YOUR_UNIQUE_FORM_ID with your Formspree endpoint ID -->
-                    <form action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email_input">Email:</label>
-                            <input type="email" id="email_input" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject:</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+        <section id="about" class="section-padding bg-light-alt">
+            <div class="container about-content">
+                <div class="about-text">
+                    <h2 class="section-title-left">About AniFlow Tech Solutions</h2>
+                    <p>At AniFlow Tech Solutions, we are driven by a passion for innovation and a commitment to client success. We believe that the right technology, thoughtfully implemented, can transform businesses.</p>
+                    <p>Our mission is to provide bespoke IT services that not only solve immediate challenges but also pave the way for future growth. We partner with organizations to understand their unique vision and deliver solutions that are powerful, intuitive, and future-proof.</p>
+                    <a href="#contact" class="btn btn-primary-outline">Learn More About Us</a>
                 </div>
-                <div class="contact-details">
-                    <h3>Contact Information</h3>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:aniket@aniflowtech.com">aniket@aniflowtech.com</a></p>
-                    <p><i class="fas fa-phone"></i> <a href="tel:+918454914776">+91 8454914776</a></p>
-                    <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/aniflowtech" target="_blank">aniflowtech</a></p>
-                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="IT Professionals Meeting" class="contact-image">
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team discussing solutions">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Let's Get in Touch</h2>
+                <p class="section-intro">Have a project in mind or want to learn more? We're here to help.</p>
+                <div class="contact-wrapper">
+                    <div class="contact-form-container">
+                        <form action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID" method="POST" id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email_input" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact Details</h3>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:aniket@aniflowtech.com">aniket@aniflowtech.com</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+918454914776">+91 8454914776</a></p>
+                        <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/aniflowtech" target="_blank" rel="noopener noreferrer">aniflowtech</a></p>
+                        <div class="map-placeholder">
+                             <p style="text-align:center; padding-top:20px;">(Your Office Location Map Could Go Here)</p>
+                             <img src="https://images.pexels.com/photos/21014/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Office location placeholder" style="width:100%; height:150px; object-fit:cover; border-radius:5px; margin-top:10px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
         <div class="container">
-            <p>© 2024 AniFlow Tech Solutions. All Rights Reserved.</p>
+            <p>© <span id="current-year"></span> AniFlow Tech Solutions. All Rights Reserved.</p>
+            <p>Designed with <i class="fas fa-heart" style="color: #ff5050;"></i> by AniFlow Tech</p>
         </div>
     </footer>
 
+    <script>
+        // Basic Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            menuToggle.classList.toggle('active'); // For 'X' icon if you add it
+        });
+
+        // Close menu when a nav link is clicked (for single-page apps)
+        document.querySelectorAll('#navbar ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
