@@ -3,23 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Business</title>
+    <title>AniFlow Tech Solutions - IT Services</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Business Aniket</h1>
-        <p>Your trusted partner for great solutions</p>
+        <div class="container">
+            <div id="logo">
+                <!-- Make sure 'logo.png' is in the same directory as this index.html file, or update path -->
+                <img src="logo.png" alt="AniFlow Tech Solutions Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section>
-        <h2>About Us</h2>
-        <p>We offer top-notch services to help your business grow. Our team is committed to excellence and innovation.</p>
+    <section id="hero">
+        <div class="container">
+            <h1>Innovative Tech Solutions for Your Business Growth</h1>
+            <p>We streamline your processes and boost your online presence with custom web applications and strategic digital marketing.</p>
+            <a href="#contact" class="btn">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <!-- Replace with your own image or keep the placeholder -->
+                    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Web Application Development">
+                    <h3>Custom Web Applications</h3>
+                    <p>We design and develop end-to-end web applications tailored to your organization's unique needs, streamlining processes and enhancing efficiency.</p>
+                </div>
+                <div class="service-item">
+                    <!-- Replace with your own image or keep the placeholder -->
+                    <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Digital Marketing">
+                    <h3>Digital Marketing</h3>
+                    <p>Amplify your brand's reach with our comprehensive digital marketing strategies, including SEO, content marketing, social media, and paid advertising.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <h2>About AniFlow Tech Solutions</h2>
+            <p>At AniFlow Tech Solutions, we are passionate about leveraging technology to solve complex business challenges. Our mission is to provide innovative and reliable IT solutions that empower organizations to achieve their goals. We focus on understanding your specific requirements to deliver services that truly make a difference.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p class="contact-intro">We'd love to hear from you! Whether you have a question about our services or want to discuss a project, feel free to reach out.</p>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <!-- IMPORTANT: Replace YOUR_UNIQUE_FORM_ID with your Formspree endpoint ID -->
+                    <form action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email_input">Email:</label>
+                            <input type="email" id="email_input" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:aniket@aniflowtech.com">aniket@aniflowtech.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+918454914776">+91 8454914776</a></p>
+                    <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/aniflowtech" target="_blank">aniflowtech</a></p>
+                    <!-- Replace with your own image or keep the placeholder -->
+                    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="IT Professionals Meeting" class="contact-image">
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>Contact us at contact@mybusiness.com</p>
-        <p>&copy; 2025 My Business</p>
+        <div class="container">
+            <p>© 2024 AniFlow Tech Solutions. All Rights Reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
