@@ -38,8 +38,11 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1140px; /* Common max-width */
+    max-width: 1140px;
     margin: 0 auto;
+}
+.text-center {
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -82,7 +85,7 @@ img {
     text-align: center;
     margin-bottom: 1.5rem;
     font-weight: 700;
-    font-size: 2.5rem; /* Larger section titles */
+    font-size: 2.5rem;
     color: var(--primary-hover-color);
 }
 .section-title-left {
@@ -110,7 +113,7 @@ img {
     padding: 12px 28px;
     font-size: 1rem;
     font-weight: 500;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -128,14 +131,14 @@ img {
     background-color: var(--primary-hover-color);
     border-color: var(--primary-hover-color);
     color: var(--light-text-color);
-    transform: translateY(-3px); /* Slightly more lift */
-    box-shadow: 0 6px 20px rgba(0, 82, 204, 0.35); /* Enhanced shadow */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 82, 204, 0.35);
 }
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--light-text-color); /* Ensure this is visible on hero */
-    border-color: var(--light-text-color); /* Ensure this is visible on hero */
+    color: var(--light-text-color);
+    border-color: var(--light-text-color);
 }
 .btn-secondary:hover {
     background-color: var(--light-text-color);
@@ -204,24 +207,23 @@ img {
 #navbar ul li a::after {
     content: '';
     position: absolute;
-    bottom: -2px; /* Slightly below text */
+    bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 2.5px; /* Slightly thicker */
+    height: 2.5px;
     background-color: var(--primary-color);
-    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+    transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 #navbar ul li a:hover,
-#navbar ul li a.active-link { /* Highlight for active link on scroll */
+#navbar ul li a.active-link {
     color: var(--primary-color);
 }
 #navbar ul li a:hover::after,
 #navbar ul li a.active-link::after {
     width: 70%;
 }
-
 
 #menu-toggle {
     display: none;
@@ -230,8 +232,8 @@ img {
     font-size: 1.5rem;
     color: var(--primary-color);
     cursor: pointer;
-    padding: 5px; /* Easier to tap */
-    z-index: 1001; /* Ensure it's above navbar when open */
+    padding: 5px;
+    z-index: 1001;
 }
 #menu-toggle i {
     transition: transform 0.3s ease;
@@ -243,41 +245,44 @@ img {
     transform: rotate(360deg);
 }
 
-
 /* --- Hero Section --- */
 #hero {
     background: linear-gradient(rgba(0, 30, 80, 0.75), rgba(0, 10, 40, 0.85)), url('https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
-    /* To use a GIF background:
-    background: linear-gradient(rgba(0, 30, 80, 0.75), rgba(0, 10, 40, 0.85)), url('YOUR_GIF_URL.gif') no-repeat center center/cover; */
     color: var(--light-text-color);
     min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 80px 0; /* Increased padding for better spacing */
-    position: relative; /* For potential pseudo-elements or overlays */
+    padding: 80px 0;
+    position: relative;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem; /* Slightly adjusted for new text */
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem; /* Reduced bottom margin */
     color: var(--light-text-color);
     line-height: 1.2;
 }
 
 .hero-content .highlight {
     color: var(--secondary-color);
-    /* Optional: Add a subtle text shadow or glow */
-    /* text-shadow: 0 0 10px rgba(0, 170, 255, 0.5); */
+}
+
+.hero-content .slogan {
+    font-size: 1.5rem; /* Slogan size */
+    font-weight: 400;
+    color: rgba(248, 249, 250, 0.95);
+    margin-bottom: 1.5rem;
+    font-style: italic;
 }
 
 .hero-content .subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem; /* Adjusted subtitle size */
     max-width: 750px;
     margin: 0 auto 2.5rem auto;
-    color: rgba(248, 249, 250, 0.9); /* Using var(--light-text-color) with alpha */
+    color: rgba(248, 249, 250, 0.9);
     font-weight: 300;
 }
 
@@ -294,17 +299,17 @@ img {
     padding: 35px 30px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 8px 25px var(--shadow-color); /* Slightly softer shadow */
+    box-shadow: 0 8px 25px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-top: 4px solid var(--primary-color);
 }
 
 .service-card:hover {
-    transform: translateY(-12px); /* More lift */
-    box-shadow: 0 18px 40px rgba(0, 82, 204, 0.2); /* More prominent shadow on hover */
+    transform: translateY(-12px);
+    box-shadow: 0 18px 40px rgba(0, 82, 204, 0.2);
 }
 .service-card:hover .service-icon i {
-    transform: scale(1.1) rotate(5deg); /* Icon animation on card hover */
+    transform: scale(1.1) rotate(5deg);
     color: var(--primary-hover-color);
 }
 
@@ -327,7 +332,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 50px; /* Increased gap */
+    gap: 50px;
 }
 .about-text {
     flex: 1;
@@ -340,19 +345,62 @@ img {
 }
 .about-image img {
     border-radius: 10px;
-    box-shadow: 0 12px 35px var(--shadow-color); /* Softer, larger shadow */
+    box-shadow: 0 12px 35px var(--shadow-color);
 }
+
+/* --- Projects Counter Section --- */
+#projects {
+    background-color: var(--bg-color); /* Or var(--light-bg-color) for contrast */
+}
+.project-counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.project-counter-item {
+    text-align: center;
+    padding: 20px 40px;
+    /* border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow-color); */
+}
+.project-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.count-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-hover-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.project-counter-item p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
 
 /* --- Contact Section --- */
 .contact-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* Changed to white for form on alt bg */
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 10px 35px var(--shadow-color);
 }
+/* If #contact has bg-light-alt, the form wrapper should be distinct */
+#contact.bg-light-alt .contact-wrapper {
+    background-color: var(--bg-color);
+}
+
+
 .contact-form-container {
     flex: 1.5;
     min-width: 300px;
@@ -367,8 +415,9 @@ img {
 }
 .contact-info p {
     display: flex;
-    align-items: center;
-    margin-bottom: 1.2rem; /* Increased spacing */
+    /* align-items: center; */ /* Align to top for multi-line address */
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
     font-size: 1rem;
 }
 .contact-info p i {
@@ -377,11 +426,12 @@ img {
     font-size: 1.2rem;
     width: 25px;
     text-align: center;
+    margin-top: 3px; /* Align icon better with first line of text */
 }
 .contact-info .map-placeholder {
     margin-top: 20px;
     border-radius: 8px;
-    overflow: hidden; /* To ensure image border-radius applies */
+    overflow: hidden;
 }
 
 .form-group {
@@ -419,7 +469,7 @@ img {
     padding: 10px;
     border-radius: 5px;
     font-weight: 500;
-    display: none; /* Hidden by default */
+    display: none;
     text-align: center;
 }
 .form-success {
@@ -442,18 +492,28 @@ img {
 /* --- Footer --- */
 #main-footer {
     background-color: var(--primary-hover-color);
-    color: rgba(255, 255, 255, 0.85); /* Slightly more opaque */
+    /* color: rgba(255, 255, 255, 0.85); */ /* Overridden by specific p tags */
     text-align: center;
-    padding: 40px 0;
+    padding: 30px 0; /* Reduced padding slightly */
     margin-top: 50px;
 }
 #main-footer p {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
 }
+/* Specific styles for footer text */
+.footer-copyright, .footer-credits, .footer-founder {
+    color: var(--light-text-color) !important; /* Ensure white text */
+}
+.footer-founder {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
 #main-footer a {
     color: var(--secondary-color);
-    font-weight: 500; /* Make link stand out a bit */
+    font-weight: 500;
 }
 #main-footer a:hover {
     color: var(--light-text-color);
@@ -493,8 +553,10 @@ img {
 /* --- Responsive Design --- */
 @media (max-width: 992px) {
     .hero-content h1 { font-size: 2.8rem; }
-    .hero-content .subtitle { font-size: 1.15rem; }
+    .hero-content .slogan { font-size: 1.3rem; }
+    .hero-content .subtitle { font-size: 1.1rem; }
     .section-title, .section-title-left { font-size: 2rem; }
+    .count-number { font-size: 3rem; }
 }
 
 @media (max-width: 768px) {
@@ -505,7 +567,7 @@ img {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 100%; /* Position below header based on header height */
+        top: 100%;
         left: 0;
         background-color: var(--bg-color);
         box-shadow: 0 5px 10px var(--shadow-color);
@@ -540,8 +602,9 @@ img {
     }
 
     .hero-content h1 { font-size: 2.2rem; }
+    .hero-content .slogan { font-size: 1.2rem; }
     .hero-content .subtitle { font-size: 1rem; }
-    #hero { min-height: auto; padding: 60px 0; } /* Adjust hero height */
+    #hero { min-height: auto; padding: 60px 0; }
 
     .about-content {
         flex-direction: column-reverse;
@@ -556,14 +619,19 @@ img {
         padding: 25px;
     }
     .contact-info { text-align: center; }
-    .contact-info p { justify-content: center; }
+    .contact-info p { justify-content: center; text-align: left\9; /* IE hack for center on P, left on text */ }
+    .contact-info p i { margin-right: 10px; }
+    .count-number { font-size: 2.8rem; }
 }
 
 @media (max-width: 480px) {
-    .hero-content h1 { font-size: 2rem; } /* Adjusted for better fit */
-    .hero-content .subtitle { font-size: 0.95rem; } /* Adjusted */
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content .slogan { font-size: 1.1rem; }
+    .hero-content .subtitle { font-size: 0.95rem; }
     .btn { padding: 10px 20px; font-size: 0.9rem; }
     .service-grid { grid-template-columns: 1fr; }
     .section-padding { padding: 60px 0; }
     #scroll-to-top { width: 45px; height: 45px; font-size: 1rem; }
+    .count-number { font-size: 2.5rem; }
+    .project-icon { font-size: 2.5rem; }
 }
