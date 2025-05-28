@@ -78,7 +78,7 @@ img {
 }
 
 .section-padding {
-    padding: 70px 0; /* Adjusted global padding slightly */
+    padding: 70px 0;
 }
 
 .section-title {
@@ -166,7 +166,7 @@ img {
 /* --- Header --- */
 #main-header {
     background-color: var(--bg-color);
-    padding: 1rem 0;
+    padding: 0.8rem 0; /* Adjusted padding for potentially taller logo */
     position: sticky;
     top: 0;
     left: 0;
@@ -183,7 +183,7 @@ img {
 }
 
 #logo img {
-    max-height: 50px;
+    max-height: 60px; /* << INCREASED LOGO MAX HEIGHT */
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -197,7 +197,7 @@ img {
 }
 
 #navbar ul li a {
-    padding: 10px 15px;
+    padding: 10px 15px; /* Padding around nav links contributes to vertical alignment */
     color: var(--text-color);
     font-weight: 500;
     position: relative;
@@ -350,29 +350,25 @@ img {
 
 /* --- Projects Counter Section (Band Style) --- */
 #projects.projects-band {
-    background-color: var(--primary-color); /* Impactful background */
-    color: var(--light-text-color); /* Default text color for this section */
-    padding: 60px 0; /* Adjust padding for the band */
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 60px 0;
 }
 
 .projects-band .section-title.projects-band-title {
     color: var(--light-text-color);
-    margin-bottom: 2rem; /* Space between title and counter */
-    font-size: 2.2rem; /* Title size for the band */
-}
-
-.projects-band .project-counter-item {
-    /* No specific background if the section itself has it */
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
 }
 
 .projects-band .project-icon.projects-band-icon {
-    font-size: 3rem; /* Icon size */
-    color: var(--secondary-color); /* Accent color for icon */
+    font-size: 3rem;
+    color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
 .projects-band .count-number.projects-band-number {
-    font-size: 4rem; /* Make number very prominent */
+    font-size: 4rem;
     font-weight: 700;
     color: var(--light-text-color);
     line-height: 1;
@@ -380,7 +376,7 @@ img {
 }
 
 .projects-band .projects-band-text {
-    font-size: 1.2rem; /* Text below counter */
+    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 400;
     margin-bottom: 0;
@@ -397,7 +393,7 @@ img {
     border-radius: 10px;
     box-shadow: 0 10px 35px var(--shadow-color);
 }
-#contact.bg-light-alt .contact-wrapper { /* Ensure contrast if contact section has light alt bg */
+#contact.bg-light-alt .contact-wrapper {
     background-color: var(--bg-color);
 }
 
@@ -415,18 +411,35 @@ img {
 }
 .contact-info p {
     display: flex;
-    align-items: flex-start; /* Align icon with first line of multi-line text */
+    align-items: flex-start;
     margin-bottom: 1.2rem;
     font-size: 1rem;
 }
 .contact-info p i {
     color: var(--primary-color);
     margin-right: 15px;
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Default icon size */
     width: 25px;
     text-align: center;
-    margin-top: 3px; /* Small adjustment for icon alignment */
+    margin-top: 3px;
 }
+
+/* STYLING FOR FOUNDER DETAIL */
+.contact-info p.founder-detail {
+    font-size: 1.1rem; /* Slightly larger text */
+    font-weight: 600; /* Bolder */
+    color: var(--primary-hover-color); /* Use a prominent theme color */
+    align-items: center; /* Center icon with the single line of text */
+    margin-bottom: 1.5rem; /* Ensure consistent spacing */
+}
+
+.contact-info p.founder-detail i {
+    font-size: 1.3rem; /* Slightly larger icon to match text */
+    margin-top: 0; /* Reset any top margin if general rule had one */
+    color: var(--primary-color); /* Keep icon color consistent or make it var(--primary-hover-color) too */
+}
+
+
 .contact-info .map-placeholder {
     margin-top: 20px;
     border-radius: 8px;
@@ -487,8 +500,10 @@ img {
     border: 1px solid #d6d8db;
 }
 
+
+/* --- Footer --- */
 #main-footer {
-    background-color: var(--primary-hover-color); /* Darker blue footer */
+    background-color: var(--primary-hover-color);
     text-align: center;
     padding: 30px 0;
     margin-top: 50px;
@@ -497,20 +512,18 @@ img {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
 }
-/* Specific styles for footer text to be PURE WHITE */
 .footer-copyright, .footer-credits {
-    color: #FFFFFF !important; /* Explicitly set to pure white */
+    color: #FFFFFF !important; /* Pure white */
 }
 
-#main-footer a { /* This applies to any links within the footer, if you add them later */
+#main-footer a {
     color: var(--secondary-color);
     font-weight: 500;
 }
 #main-footer a:hover {
-    color: #FFFFFF; /* Links on hover can also be pure white */
+    color: #FFFFFF;
     text-decoration: underline;
 }
-
 
 /* --- Scroll-to-Top Button --- */
 #scroll-to-top {
@@ -544,16 +557,21 @@ img {
 
 /* --- Responsive Design --- */
 @media (max-width: 992px) {
+    #logo img { max-height: 55px; } /* Adjust logo for tablets */
     .hero-content h1 { font-size: 2.8rem; }
     .hero-content .slogan { font-size: 1.3rem; }
     .hero-content .subtitle { font-size: 1.1rem; }
     .section-title, .section-title-left { font-size: 2rem; }
     .projects-band .section-title.projects-band-title { font-size: 2rem; }
     .projects-band .count-number.projects-band-number { font-size: 3.5rem; }
+    .contact-info p.founder-detail { font-size: 1.05rem; }
+    .contact-info p.founder-detail i { font-size: 1.25rem; }
 }
 
 @media (max-width: 768px) {
     html { font-size: 15px; }
+    #logo img { max-height: 50px; } /* Adjust logo for mobile */
+    #main-header { padding: 0.6rem 0; } /* Adjust header padding for mobile */
     
     #navbar {
         display: none; flex-direction: column; width: 100%;
@@ -583,8 +601,7 @@ img {
     .contact-wrapper { flex-direction: column; padding: 25px; }
     .contact-info { text-align: center; }
     .contact-info p { justify-content: center; }
-    /* For centered contact items, icon alignment needs specific handling or text align left within P */
-    .contact-info p i { margin-right: 10px; /*align-self: flex-start; already handled by p align-items:flex-start*/ }
+    .contact-info p.founder-detail { justify-content: center; } /* Ensure it's centered on mobile too */
 
 
     .projects-band .section-title.projects-band-title { font-size: 1.8rem; }
@@ -594,12 +611,13 @@ img {
 }
 
 @media (max-width: 480px) {
+    #logo img { max-height: 45px; } /* Further adjust logo for very small screens */
     .hero-content h1 { font-size: 2rem; }
     .hero-content .slogan { font-size: 1.1rem; }
     .hero-content .subtitle { font-size: 0.95rem; }
     .btn { padding: 10px 20px; font-size: 0.9rem; }
     .service-grid { grid-template-columns: 1fr; }
-    .section-padding { padding: 50px 0; } /* Further reduced padding for very small screens */
+    .section-padding { padding: 50px 0; }
     #projects.projects-band { padding: 50px 0; }
 
 
@@ -609,4 +627,6 @@ img {
     .projects-band .projects-band-text { font-size: 1rem; }
 
     #scroll-to-top { width: 45px; height: 45px; font-size: 1rem; }
+    .contact-info p.founder-detail { font-size: 1rem; }
+    .contact-info p.founder-detail i { font-size: 1.1rem; }
 }
