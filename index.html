@@ -124,7 +124,7 @@
                     </div>
                     <div class="contact-info" data-aos="fade-left" data-aos-delay="300">
                         <h3>Contact Details</h3>
-                        <p><i class="fas fa-user-tie"></i> Founder: Aniket Nishad</p>
+                        <p class="founder-detail"><i class="fas fa-user-tie"></i> Founder: Aniket Nishad</p> {/* Added class="founder-detail" */}
                         <p><i class="fas fa-envelope"></i> <a href="mailto:aniket@aniflowtech.com">aniket@aniflowtech.com</a></p>
                         <p><i class="fas fa-phone"></i> <a href="tel:+918454914776">+91 8454914776</a></p>
                         <p><i class="fas fa-map-marker-alt"></i> Office No- 003, Ashok Nagar Lane,<br>Santacruz East, Mumbai - 400055</p>
@@ -143,7 +143,6 @@
         <div class="container">
             <p class="footer-copyright">© <span id="current-year"></span> AniFlow Tech Solutions. Your Partner in IT Innovation. All Rights Reserved.</p>
             <p class="footer-credits">Designed with <i class="fas fa-heart" style="color: #ff5050;"></i> by AniFlow Tech</p>
-            <!-- Founder info moved to contact section -->
         </div>
     </footer>
 
@@ -235,8 +234,8 @@
 
             if (projectCountElement && !counterAnimated) {
                 const sectionProjects = document.getElementById('projects');
-                if (sectionProjects) { // Check if element exists
-                    const sectionTop = sectionProjects.offsetTop - window.innerHeight + (window.innerHeight * 0.3); // Trigger when 30% visible
+                if (sectionProjects) {
+                    const sectionTop = sectionProjects.offsetTop - window.innerHeight + (window.innerHeight * 0.3);
                      if (scrollY > sectionTop) {
                         animateCounter(projectCountElement, 100);
                         counterAnimated = true;
