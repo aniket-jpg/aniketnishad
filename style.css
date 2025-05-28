@@ -23,7 +23,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px; /* Base font size */
+    font-size: 16px;
 }
 
 body {
@@ -33,7 +33,7 @@ body {
     background-color: var(--bg-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden; /* Prevent horizontal scroll from AOS */
+    overflow-x: hidden;
 }
 
 .container {
@@ -78,7 +78,7 @@ img {
 }
 
 .section-padding {
-    padding: 80px 0;
+    padding: 70px 0; /* Adjusted global padding slightly */
 }
 
 .section-title {
@@ -259,9 +259,9 @@ img {
 }
 
 .hero-content h1 {
-    font-size: 3.2rem; /* Slightly adjusted for new text */
+    font-size: 3.2rem;
     font-weight: 700;
-    margin-bottom: 0.75rem; /* Reduced bottom margin */
+    margin-bottom: 0.75rem;
     color: var(--light-text-color);
     line-height: 1.2;
 }
@@ -271,7 +271,7 @@ img {
 }
 
 .hero-content .slogan {
-    font-size: 1.5rem; /* Slogan size */
+    font-size: 1.5rem;
     font-weight: 400;
     color: rgba(248, 249, 250, 0.95);
     margin-bottom: 1.5rem;
@@ -279,7 +279,7 @@ img {
 }
 
 .hero-content .subtitle {
-    font-size: 1.2rem; /* Adjusted subtitle size */
+    font-size: 1.2rem;
     max-width: 750px;
     margin: 0 auto 2.5rem auto;
     color: rgba(248, 249, 250, 0.9);
@@ -348,39 +348,41 @@ img {
     box-shadow: 0 12px 35px var(--shadow-color);
 }
 
-/* --- Projects Counter Section --- */
-#projects {
-    background-color: var(--bg-color); /* Or var(--light-bg-color) for contrast */
+/* --- Projects Counter Section (Band Style) --- */
+#projects.projects-band {
+    background-color: var(--primary-color); /* Impactful background */
+    color: var(--light-text-color); /* Default text color for this section */
+    padding: 60px 0; /* Adjust padding for the band */
 }
-.project-counter-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+
+.projects-band .section-title.projects-band-title {
+    color: var(--light-text-color);
+    margin-bottom: 2rem; /* Space between title and counter */
+    font-size: 2.2rem; /* Title size for the band */
 }
-.project-counter-item {
-    text-align: center;
-    padding: 20px 40px;
-    /* border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: 0 5px 15px var(--shadow-color); */
+
+.projects-band .project-counter-item {
+    /* No specific background if the section itself has it */
 }
-.project-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
+
+.projects-band .project-icon.projects-band-icon {
+    font-size: 3rem; /* Icon size */
+    color: var(--secondary-color); /* Accent color for icon */
     margin-bottom: 1rem;
 }
-.count-number {
-    font-size: 3.5rem;
+
+.projects-band .count-number.projects-band-number {
+    font-size: 4rem; /* Make number very prominent */
     font-weight: 700;
-    color: var(--primary-hover-color);
+    color: var(--light-text-color);
     line-height: 1;
     margin-bottom: 0.5rem;
 }
-.project-counter-item p {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    font-weight: 500;
+
+.projects-band .projects-band-text {
+    font-size: 1.2rem; /* Text below counter */
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
     margin-bottom: 0;
 }
 
@@ -390,16 +392,14 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    background-color: var(--bg-color); /* Changed to white for form on alt bg */
+    background-color: var(--bg-color);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 10px 35px var(--shadow-color);
 }
-/* If #contact has bg-light-alt, the form wrapper should be distinct */
-#contact.bg-light-alt .contact-wrapper {
+#contact.bg-light-alt .contact-wrapper { /* Ensure contrast if contact section has light alt bg */
     background-color: var(--bg-color);
 }
-
 
 .contact-form-container {
     flex: 1.5;
@@ -415,8 +415,7 @@ img {
 }
 .contact-info p {
     display: flex;
-    /* align-items: center; */ /* Align to top for multi-line address */
-    align-items: flex-start;
+    align-items: flex-start; /* Align icon with first line of multi-line text */
     margin-bottom: 1.2rem;
     font-size: 1rem;
 }
@@ -426,7 +425,7 @@ img {
     font-size: 1.2rem;
     width: 25px;
     text-align: center;
-    margin-top: 3px; /* Align icon better with first line of text */
+    margin-top: 3px; /* Small adjustment for icon alignment */
 }
 .contact-info .map-placeholder {
     margin-top: 20px;
@@ -488,37 +487,30 @@ img {
     border: 1px solid #d6d8db;
 }
 
-
-/* --- Footer --- */
 #main-footer {
-    background-color: var(--primary-hover-color);
-    /* color: rgba(255, 255, 255, 0.85); */ /* Overridden by specific p tags */
+    background-color: var(--primary-hover-color); /* Darker blue footer */
     text-align: center;
-    padding: 30px 0; /* Reduced padding slightly */
+    padding: 30px 0;
     margin-top: 50px;
 }
 #main-footer p {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
 }
-/* Specific styles for footer text */
-.footer-copyright, .footer-credits, .footer-founder {
-    color: var(--light-text-color) !important; /* Ensure white text */
-}
-.footer-founder {
-    font-size: 0.85rem;
-    margin-top: 8px;
-    opacity: 0.9;
+/* Specific styles for footer text to be PURE WHITE */
+.footer-copyright, .footer-credits {
+    color: #FFFFFF !important; /* Explicitly set to pure white */
 }
 
-#main-footer a {
+#main-footer a { /* This applies to any links within the footer, if you add them later */
     color: var(--secondary-color);
     font-weight: 500;
 }
 #main-footer a:hover {
-    color: var(--light-text-color);
+    color: #FFFFFF; /* Links on hover can also be pure white */
     text-decoration: underline;
 }
+
 
 /* --- Scroll-to-Top Button --- */
 #scroll-to-top {
@@ -556,72 +548,49 @@ img {
     .hero-content .slogan { font-size: 1.3rem; }
     .hero-content .subtitle { font-size: 1.1rem; }
     .section-title, .section-title-left { font-size: 2rem; }
-    .count-number { font-size: 3rem; }
+    .projects-band .section-title.projects-band-title { font-size: 2rem; }
+    .projects-band .count-number.projects-band-number { font-size: 3.5rem; }
 }
 
 @media (max-width: 768px) {
     html { font-size: 15px; }
     
     #navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
+        display: none; flex-direction: column; width: 100%;
+        position: absolute; top: 100%; left: 0;
         background-color: var(--bg-color);
         box-shadow: 0 5px 10px var(--shadow-color);
-        padding: 1rem 0;
-        border-top: 1px solid var(--border-color);
+        padding: 1rem 0; border-top: 1px solid var(--border-color);
     }
-    #navbar.active {
-        display: flex;
-    }
-    #navbar ul {
-        flex-direction: column;
-        width: 100%;
-    }
-    #navbar ul li {
-        text-align: center;
-        margin: 0;
-        width: 100%;
-    }
-    #navbar ul li a {
-        display: block;
-        padding: 12px 15px;
-        width: 100%;
-        border-bottom: 1px solid var(--light-bg-color);
-    }
-    #navbar ul li:last-child a {
-        border-bottom: none;
-    }
+    #navbar.active { display: flex; }
+    #navbar ul { flex-direction: column; width: 100%; }
+    #navbar ul li { text-align: center; margin: 0; width: 100%; }
+    #navbar ul li a { display: block; padding: 12px 15px; width: 100%; border-bottom: 1px solid var(--light-bg-color); }
+    #navbar ul li:last-child a { border-bottom: none; }
     #navbar ul li a::after { display: none; }
-
-    #menu-toggle {
-        display: block;
-    }
+    #menu-toggle { display: block; }
 
     .hero-content h1 { font-size: 2.2rem; }
     .hero-content .slogan { font-size: 1.2rem; }
     .hero-content .subtitle { font-size: 1rem; }
     #hero { min-height: auto; padding: 60px 0; }
 
-    .about-content {
-        flex-direction: column-reverse;
-        gap: 30px;
-    }
+    .about-content { flex-direction: column-reverse; gap: 30px; }
     .about-text { text-align: center; }
     .about-image img { margin: 0 auto 2rem auto; }
     .section-title-left { text-align: center; }
 
-    .contact-wrapper {
-        flex-direction: column;
-        padding: 25px;
-    }
+    .contact-wrapper { flex-direction: column; padding: 25px; }
     .contact-info { text-align: center; }
-    .contact-info p { justify-content: center; text-align: left\9; /* IE hack for center on P, left on text */ }
-    .contact-info p i { margin-right: 10px; }
-    .count-number { font-size: 2.8rem; }
+    .contact-info p { justify-content: center; }
+    /* For centered contact items, icon alignment needs specific handling or text align left within P */
+    .contact-info p i { margin-right: 10px; /*align-self: flex-start; already handled by p align-items:flex-start*/ }
+
+
+    .projects-band .section-title.projects-band-title { font-size: 1.8rem; }
+    .projects-band .count-number.projects-band-number { font-size: 3rem; }
+    .projects-band .project-icon.projects-band-icon { font-size: 2.5rem; }
+    .projects-band .projects-band-text { font-size: 1.1rem; }
 }
 
 @media (max-width: 480px) {
@@ -630,8 +599,14 @@ img {
     .hero-content .subtitle { font-size: 0.95rem; }
     .btn { padding: 10px 20px; font-size: 0.9rem; }
     .service-grid { grid-template-columns: 1fr; }
-    .section-padding { padding: 60px 0; }
+    .section-padding { padding: 50px 0; } /* Further reduced padding for very small screens */
+    #projects.projects-band { padding: 50px 0; }
+
+
+    .projects-band .section-title.projects-band-title { font-size: 1.6rem; margin-bottom: 1.5rem;}
+    .projects-band .count-number.projects-band-number { font-size: 2.8rem; }
+    .projects-band .project-icon.projects-band-icon { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .projects-band .projects-band-text { font-size: 1rem; }
+
     #scroll-to-top { width: 45px; height: 45px; font-size: 1rem; }
-    .count-number { font-size: 2.5rem; }
-    .project-icon { font-size: 2.5rem; }
 }
