@@ -83,9 +83,9 @@
                     <p>Our mission is to deliver bespoke web applications, AI-driven process optimization tools (including secure bulk email systems and robust data management), and impactful digital marketing. We partner with you to understand your unique vision, digitize your workflows, and build powerful, intuitive IT systems that pave the way for future growth and optimized efficiency, particularly for startups looking to scale from manual foundations.</p>
                     <a href="#contact" class="btn btn-primary-outline">Learn How We Can Help</a>
                 </div>
-                <div class="about-image-container" data-aos="fade-left" data-aos-delay="300">
-                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="AniFlow Tech Solutions team collaboration" class="about-img" data-aos-delay="350">
-                    <img src="https://i.ibb.co/8L0PzQrk/backgrund.png" alt="AniFlow Tech Digital Transformation Background" class="about-img" data-aos-delay="500">
+                <div class="about-image-container">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="AniFlow Tech Solutions team collaboration" class="about-img" data-aos="fade-left" data-aos-delay="300">
+                    <img src="https://i.ibb.co/8L0PzQrk/backgrund.png" alt="AniFlow Tech Digital Transformation Background" class="about-img" data-aos="fade-left" data-aos-delay="450">
                 </div>
             </div>
         </section>
@@ -231,12 +231,12 @@
                 const sectionTop = current.offsetTop - 100; 
                 let sectionId = current.getAttribute('id');
 
-                const navLink = document.querySelector('#navbar a[href*="' + sectionId + '"]'); // Fixed selector
+                const navLink = document.querySelector('#navbar a[href*="' + sectionId + '"]');
                 if (navLink) {
                     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                         navLink.classList.add('active-link');
                     } else {
-                        navLink.classList.remove('active-link'); // Fixed remove class
+                        navLink.classList.remove('active-link');
                     }
                 }
             });
