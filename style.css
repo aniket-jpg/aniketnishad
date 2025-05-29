@@ -331,7 +331,7 @@ img {
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: center; 
     gap: 50px;
 }
 .about-text {
@@ -339,25 +339,25 @@ img {
     min-width: 300px;
 }
 
-.about-image-container { /* Container for the two images */
+.about-image-container {
     flex: 1;
     min-width: 300px;
     display: flex; 
     flex-wrap: wrap; 
     gap: 20px; 
-    align-items: center; 
+    align-items: stretch; 
     justify-content: center; 
 }
 
-.about-image-container .about-img { /* Styles for individual images */
+.about-image-container .about-img {
     border-radius: 10px;
     box-shadow: 0 12px 35px var(--shadow-color);
     flex: 1 1 calc(50% - 10px); 
     max-width: calc(50% - 10px); 
     min-width: 200px; 
-    height: auto;
-    object-fit: cover; 
-    max-height: 300px; 
+    
+    height: 280px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop to fit, maintaining aspect ratio */
 }
 
 
@@ -580,7 +580,7 @@ img {
     .contact-info p.founder-detail i { font-size: 1.25rem; }
 
     .about-image-container .about-img {
-        max-width: calc(50% - 10px); 
+        /* height: 280px; is inherited */
     }
 }
 
@@ -611,7 +611,6 @@ img {
 
     .about-content { flex-direction: column-reverse; gap: 30px; }
     .about-text { text-align: center; }
-    /* .about-image img { margin: 0 auto 2rem auto; } */ /* Old rule, handled by new container */
     .section-title-left { text-align: center; }
 
     .about-image-container {
@@ -623,6 +622,7 @@ img {
         max-width: 80%; 
         min-width: auto; 
         flex-basis: auto; 
+        /* height: 280px; is inherited */
         margin-bottom: 20px; 
     }
     .about-image-container .about-img:last-child {
@@ -660,6 +660,7 @@ img {
 
     .about-image-container .about-img {
         max-width: 90%; 
+        /* height: 280px; is inherited */
     }
 
     #scroll-to-top { width: 45px; height: 45px; font-size: 1rem; }
