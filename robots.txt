@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://aniket-jpg.github.io/aniketnishad/sitemap.yml
