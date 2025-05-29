@@ -630,3 +630,59 @@ img {
     .contact-info p.founder-detail { font-size: 1rem; }
     .contact-info p.founder-detail i { font-size: 1.1rem; }
 }
+/* --- About Section --- */
+/* ... your existing .about-content styles ... */
+
+.about-image-container { /* Renamed from .about-image to avoid conflict if .about-image was a direct img selector */
+    flex: 1;
+    min-width: 300px;
+    display: flex; /* To arrange images side-by-side */
+    flex-wrap: wrap; /* Allow wrapping if space is too tight */
+    gap: 20px; /* Space between images */
+    align-items: center; /* Align images vertically */
+    justify-content: center; /* Center images if they wrap */
+}
+
+.about-image-container .about-img { /* New class for individual images */
+    border-radius: 10px;
+    box-shadow: 0 12px 35px var(--shadow-color);
+    /* Make images flexible but not exceed half the container roughly, allowing for gap */
+    flex: 1 1 calc(50% - 10px); /* Grow, shrink, basis considering gap */
+    max-width: calc(50% - 10px); /* Max width when side-by-side */
+    min-width: 200px; /* Minimum width before they might stack due to flex-wrap */
+    height: auto;
+    object-fit: cover; /* Ensures images fill their space nicely */
+    max-height: 300px; /* Optional: constrain height */
+}
+
+
+/* Responsive adjustments for about images */
+@media (max-width: 992px) { /* Tablet and below */
+    .about-image-container .about-img {
+        max-width: calc(50% - 10px); /* Keep side-by-side for tablets if possible */
+    }
+}
+
+@media (max-width: 768px) {
+    /* .about-content flex-direction is already column-reverse here */
+    .about-image-container {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center;
+        width: 100%; /* Take full width of its parent */
+    }
+    .about-image-container .about-img {
+        max-width: 80%; /* Allow images to be larger when stacked */
+        min-width: auto; /* Reset min-width */
+        flex-basis: auto; /* Reset flex-basis */
+        margin-bottom: 20px; /* Add space below each image when stacked */
+    }
+    .about-image-container .about-img:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image-container .about-img {
+        max-width: 90%; /* Adjust for very small screens */
+    }
+}
