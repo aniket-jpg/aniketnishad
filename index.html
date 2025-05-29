@@ -83,8 +83,9 @@
                     <p>Our mission is to deliver bespoke web applications, AI-driven process optimization tools (including secure bulk email systems and robust data management), and impactful digital marketing. We partner with you to understand your unique vision, digitize your workflows, and build powerful, intuitive IT systems that pave the way for future growth and optimized efficiency, particularly for startups looking to scale from manual foundations.</p>
                     <a href="#contact" class="btn btn-primary-outline">Learn How We Can Help</a>
                 </div>
-                <div class="about-image" data-aos="fade-left" data-aos-delay="400">
-                    <img src="https://i.ibb.co/8L0PzQrk/backgrund.png" alt="AniFlow Tech Digital Transformation and Technology Background">
+                <div class="about-image-container"> {/* Changed class name for clarity */}
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="AniFlow Tech Solutions team collaboration" data-aos="fade-left" data-aos-delay="300" class="about-img">
+                    <img src="https://i.ibb.co/8L0PzQrk/backgrund.png" alt="AniFlow Tech Digital Transformation Background" data-aos="fade-left" data-aos-delay="450" class="about-img">
                 </div>
             </div>
         </section>
@@ -203,12 +204,11 @@
 
         function animateCounter(element, target) {
             let current = 0;
-            const increment = Math.ceil(target / 100); // Counts up in 100 steps
-            const intervalTime = 20; // Milliseconds
+            const increment = Math.ceil(target / 100); 
+            const intervalTime = 20; 
             
-            // If target is 0 or not a number, set to 0+ and skip animation
             if (isNaN(target) || target === 0) {
-                element.textContent = "0+"; // Or just "0"
+                element.textContent = "0+";
                 return;
             }
 
@@ -228,7 +228,7 @@
             let scrollY = window.pageYOffset;
             sections.forEach(current => {
                 const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 100; // Adjust offset as needed for active link highlighting
+                const sectionTop = current.offsetTop - 100; 
                 let sectionId = current.getAttribute('id');
 
                 const navLink = document.querySelector('#navbar a[href*=' + sectionId + ']');
@@ -236,19 +236,17 @@
                     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                         navLink.classList.add('active-link');
                     } else {
-                        navLink.classList.remove('active-link');
+                        navLink.classList.remove.active-link');
                     }
                 }
             });
 
-            // Project counter animation
             if (projectCountElement && !counterAnimated) {
                 const sectionProjects = document.getElementById('projects');
                 if (sectionProjects) {
-                    // Trigger when the top of the projects section is about 30% into the viewport
                     const sectionTopVisible = sectionProjects.offsetTop - window.innerHeight + (sectionProjects.offsetHeight * 0.3); 
                      if (scrollY > sectionTopVisible) {
-                        animateCounter(projectCountElement, 100); // Target count
+                        animateCounter(projectCountElement, 100); 
                         counterAnimated = true;
                     }
                 }
@@ -256,9 +254,8 @@
         }
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial check on page load
+        handleScroll(); 
 
-        // Contact Form Submission
         const contactForm = document.getElementById('contact-form');
         const formStatus = document.getElementById('form-status');
 
