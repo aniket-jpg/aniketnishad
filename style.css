@@ -166,7 +166,7 @@ img {
 /* --- Header --- */
 #main-header {
     background-color: var(--bg-color);
-    padding: 0.8rem 0; 
+    padding: 0.8rem 0;
     position: sticky;
     top: 0;
     left: 0;
@@ -183,7 +183,7 @@ img {
 }
 
 #logo img {
-    max-height: 60px; 
+    max-height: 60px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -197,7 +197,7 @@ img {
 }
 
 #navbar ul li a {
-    padding: 10px 15px; 
+    padding: 10px 15px;
     color: var(--text-color);
     font-weight: 500;
     position: relative;
@@ -331,7 +331,7 @@ img {
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: center; 
+    align-items: center;
     gap: 50px;
 }
 .about-text {
@@ -342,22 +342,21 @@ img {
 .about-image-container {
     flex: 1;
     min-width: 300px;
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 20px; 
-    align-items: stretch; 
-    justify-content: center; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .about-image-container .about-img {
     border-radius: 10px;
     box-shadow: 0 12px 35px var(--shadow-color);
-    flex: 1 1 calc(50% - 10px); 
-    max-width: calc(50% - 10px); 
-    min-width: 200px; 
-    
-    height: 280px; /* Fixed height for consistency */
-    object-fit: cover; /* Crop to fit, maintaining aspect ratio */
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    min-width: 200px;
+    height: 280px; /* Default height for desktop */
+    object-fit: cover;
 }
 
 
@@ -431,24 +430,24 @@ img {
 .contact-info p i {
     color: var(--primary-color);
     margin-right: 15px;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
     width: 25px;
     text-align: center;
     margin-top: 3px;
 }
 
 .contact-info p.founder-detail {
-    font-size: 1.1rem; 
-    font-weight: 600; 
-    color: var(--primary-hover-color); 
-    align-items: center; 
-    margin-bottom: 1.5rem; 
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-hover-color);
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .contact-info p.founder-detail i {
-    font-size: 1.3rem; 
-    margin-top: 0; 
-    color: var(--primary-color); 
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--primary-color);
 }
 
 
@@ -525,7 +524,7 @@ img {
     font-size: 0.9rem;
 }
 .footer-copyright, .footer-credits {
-    color: #FFFFFF !important; 
+    color: #FFFFFF !important;
 }
 
 #main-footer a {
@@ -568,8 +567,8 @@ img {
 }
 
 /* --- Responsive Design --- */
-@media (max-width: 992px) {
-    #logo img { max-height: 55px; } 
+@media (max-width: 992px) { /* Tablet */
+    #logo img { max-height: 55px; }
     .hero-content h1 { font-size: 2.8rem; }
     .hero-content .slogan { font-size: 1.3rem; }
     .hero-content .subtitle { font-size: 1.1rem; }
@@ -580,15 +579,15 @@ img {
     .contact-info p.founder-detail i { font-size: 1.25rem; }
 
     .about-image-container .about-img {
-        /* height: 280px; is inherited */
+        /* height: 280px; is inherited, this is fine for tablets if side-by-side */
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Mobile */
     html { font-size: 15px; }
-    #logo img { max-height: 50px; } 
-    #main-header { padding: 0.6rem 0; } 
-    
+    #logo img { max-height: 50px; }
+    #main-header { padding: 0.6rem 0; }
+
     #navbar {
         display: none; flex-direction: column; width: 100%;
         position: absolute; top: 100%; left: 0;
@@ -614,16 +613,16 @@ img {
     .section-title-left { text-align: center; }
 
     .about-image-container {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
-        width: 100%; 
+        width: 100%;
     }
     .about-image-container .about-img {
-        max-width: 80%; 
-        min-width: auto; 
-        flex-basis: auto; 
-        /* height: 280px; is inherited */
-        margin-bottom: 20px; 
+        max-width: 80%;    /* Control width on mobile */
+        height: auto;      /* <<<< CORRECTED: Allow height to adjust proportionally */
+        min-width: auto;   /* Reset from desktop if necessary */
+        flex-basis: auto;  /* Reset from desktop if necessary */
+        margin-bottom: 20px;
     }
     .about-image-container .about-img:last-child {
         margin-bottom: 0;
@@ -633,7 +632,7 @@ img {
     .contact-wrapper { flex-direction: column; padding: 25px; }
     .contact-info { text-align: center; }
     .contact-info p { justify-content: center; }
-    .contact-info p.founder-detail { justify-content: center; } 
+    .contact-info p.founder-detail { justify-content: center; }
 
 
     .projects-band .section-title.projects-band-title { font-size: 1.8rem; }
@@ -642,8 +641,8 @@ img {
     .projects-band .projects-band-text { font-size: 1.1rem; }
 }
 
-@media (max-width: 480px) {
-    #logo img { max-height: 45px; } 
+@media (max-width: 480px) { /* Small Mobile */
+    #logo img { max-height: 45px; }
     .hero-content h1 { font-size: 2rem; }
     .hero-content .slogan { font-size: 1.1rem; }
     .hero-content .subtitle { font-size: 0.95rem; }
@@ -659,8 +658,8 @@ img {
     .projects-band .projects-band-text { font-size: 1rem; }
 
     .about-image-container .about-img {
-        max-width: 90%; 
-        /* height: 280px; is inherited */
+        max-width: 90%; /* Adjust width for very small screens */
+        height: auto;   /* <<<< CORRECTED: Ensure height is auto here too */
     }
 
     #scroll-to-top { width: 45px; height: 45px; font-size: 1rem; }
