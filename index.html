@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- AOS (Animate On Scroll) Library CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Link to your NEW style.css file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -44,7 +46,7 @@
                 <h1 data-aos="fade-up" data-aos-delay="200">Accelerating <span class="highlight">Growth</span> with Proven Web & AI Solutions</h1>
                 <p class="slogan" data-aos="fade-up" data-aos-delay="300"><em>Innovation in every step.</em></p>
                 <p class="subtitle" data-aos="fade-up" data-aos-delay="400">Empowering startups and industries by building end-to-end web solutions, optimizing digital presence, and leveraging AI tools (like safe bulk email senders) to streamline manual processes and fuel sustainable growth.</p>
-                <div data-aos="fade-up" data-aos-delay="600">
+                <div data-aos="fade-up" data-aos-delay="600" class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Request a Consultation</a>
                     <a href="#services" class="btn btn-secondary">Explore Our Solutions</a>
                 </div>
@@ -84,8 +86,8 @@
                     <a href="#contact" class="btn btn-primary-outline">Learn How We Can Help</a>
                 </div>
                 <div class="about-image-container">
-                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="AniFlow Tech Solutions team collaboration" class="about-img" data-aos="fade-left" data-aos-delay="300">
-                    <img src="https://i.ibb.co/8L0PzQrk/backgrund.png" alt="AniFlow Tech Digital Transformation Background" class="about-img" data-aos="fade-left" data-aos-delay="450">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="AniFlow Tech Solutions team collaboration" class="about-img main-img" data-aos="fade-left" data-aos-delay="300">
+                    <img src="https://i.ibb.co/8L0PzQrk/backgrund.png" alt="AniFlow Tech Digital Transformation Background" class="about-img secondary-img" data-aos="fade-left" data-aos-delay="450">
                 </div>
             </div>
         </section>
@@ -109,19 +111,23 @@
                     <div class="contact-form-container" data-aos="fade-right" data-aos-delay="200">
                         <form action="https://formspree.io/f/movdglon" method="POST" id="contact-form">
                             <div class="form-group">
+                                <label for="name" class="visually-hidden">Your Name</label>
                                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                             </div>
                             <div class="form-group">
+                                 <label for="email_input" class="visually-hidden">Your Email</label>
                                 <input type="email" id="email_input" name="email" placeholder="Your Email" required>
                             </div>
                             <div class="form-group">
+                                <label for="subject" class="visually-hidden">Subject</label>
                                 <input type="text" id="subject" name="subject" placeholder="Subject (e.g., Web App for Factory, Startup Growth)" required>
                             </div>
                             <div class="form-group">
+                                <label for="message" class="visually-hidden">Your Message</label>
                                 <textarea id="message" name="message" rows="5" placeholder="Briefly describe your project, current manual processes, or needs" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                            <div id="form-status"></div>
+                            <div id="form-status" aria-live="polite"></div>
                         </form>
                     </div>
                     <div class="contact-info" data-aos="fade-left" data-aos-delay="300">
@@ -131,8 +137,8 @@
                         <p><i class="fas fa-phone"></i> <a href="tel:+918454914776">+91 8454914776</a></p>
                         <p><i class="fas fa-map-marker-alt"></i> Office No- 003, Ashok Nagar Lane,<br>Santacruz East, Mumbai - 400055</p>
                         <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/aniflowtech" target="_blank" rel="noopener noreferrer">aniflowtech</a></p>
-                        <div class="map-placeholder">
-                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.824965996963!2d72.85000000000001!3d19.071000000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzE1LjYiTiA3MsKwNTEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1678886400000!5m2!1sen!2sin" width="100%" height="180" style="border:0; border-radius:8px; margin-top:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office Location"></iframe>
+                        <div class="map-container">
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.824965996963!2d72.85000000000001!3d19.071000000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzE1LjYiTiA3MsKwNTEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1678886400000!5m2!1sen!2sin" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office Location"></iframe>
                              <p style="text-align:center; margin-top:5px; font-size:0.9rem;">(Approximate Location Representation)</p>
                         </div>
                     </div>
@@ -154,12 +160,15 @@
     <script>
         AOS.init({
             duration: 800,
-            once: true,
+            once: true, // Only animate once as you scroll down
+            easing: 'ease-in-out' // More natural animation
         });
 
         const menuToggle = document.getElementById('menu-toggle');
         const navbar = document.getElementById('navbar');
         const navLinks = document.querySelectorAll('#navbar ul li a');
+        const header = document.getElementById('main-header');
+
 
         menuToggle.addEventListener('click', () => {
             navbar.classList.toggle('active');
@@ -167,9 +176,13 @@
             if (menuToggle.classList.contains('active')) {
                 menuToggle.innerHTML = '<i class="fas fa-times"></i>';
                 menuToggle.setAttribute('aria-label', 'Close Menu');
+                // Disable scrolling when menu is open
+                document.body.style.overflowY = 'hidden';
             } else {
                 menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
                 menuToggle.setAttribute('aria-label', 'Open Menu');
+                // Re-enable scrolling
+                document.body.style.overflowY = 'auto';
             }
         });
 
@@ -180,18 +193,39 @@
                     menuToggle.classList.remove('active');
                     menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
                     menuToggle.setAttribute('aria-label', 'Open Menu');
+                     document.body.style.overflowY = 'auto'; // Re-enable scrolling
                 }
             });
         });
+
+         // Close menu on resize if open
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navbar.classList.contains('active')) {
+                 navbar.classList.remove('active');
+                 menuToggle.classList.remove('active');
+                 menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                 menuToggle.setAttribute('aria-label', 'Open Menu');
+                 document.body.style.overflowY = 'auto'; // Re-enable scrolling
+            }
+        });
+
 
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
         const scrollToTopBtn = document.getElementById('scroll-to-top');
         window.addEventListener('scroll', () => {
+            // Show/hide scroll-to-top button
             if (window.pageYOffset > 300) {
                 scrollToTopBtn.classList.add('show');
             } else {
                 scrollToTopBtn.classList.remove('show');
+            }
+
+            // Add shadow to header on scroll
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                 header.classList.remove('scrolled');
             }
         });
         scrollToTopBtn.addEventListener('click', () => {
@@ -204,9 +238,10 @@
 
         function animateCounter(element, target) {
             let current = 0;
-            const increment = Math.ceil(target / 100); 
-            const intervalTime = 20; 
-            
+             // Ensure increment is at least 1
+            const increment = Math.max(1, Math.ceil(target / 150)); // Smaller increment, slightly longer animation
+            const intervalTime = 10; // Faster interval
+
             if (isNaN(target) || target === 0) {
                 element.textContent = "0+";
                 return;
@@ -226,35 +261,44 @@
 
         function handleScroll() {
             let scrollY = window.pageYOffset;
+            const viewportHeight = window.innerHeight;
+
             sections.forEach(current => {
                 const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 100; 
+                // Adjust offset to activate when section is partially visible
+                const sectionTop = current.offsetTop - viewportHeight * 0.5; // Activate when top half is visible
+
                 let sectionId = current.getAttribute('id');
 
                 const navLink = document.querySelector('#navbar a[href*="' + sectionId + '"]');
                 if (navLink) {
                     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        // Remove active class from all nav links first
+                        navLinks.forEach(link => link.classList.remove('active-link'));
+                        // Add active class to the current section's nav link
                         navLink.classList.add('active-link');
-                    } else {
-                        navLink.classList.remove('active-link');
                     }
                 }
             });
 
+            // Counter animation trigger
             if (projectCountElement && !counterAnimated) {
                 const sectionProjects = document.getElementById('projects');
                 if (sectionProjects) {
-                    const sectionTopVisible = sectionProjects.offsetTop - window.innerHeight + (sectionProjects.offsetHeight * 0.3); 
+                    // Trigger when the top of the projects section enters the viewport
+                     const sectionTopVisible = sectionProjects.offsetTop - viewportHeight + sectionProjects.offsetHeight * 0.2; // Adjust trigger point
                      if (scrollY > sectionTopVisible) {
-                        animateCounter(projectCountElement, 100); 
+                        animateCounter(projectCountElement, 100); // Target 100, will show 100+
                         counterAnimated = true;
                     }
                 }
             }
         }
 
+        // Initial call to set active link and counter state on page load
+        window.addEventListener('load', handleScroll);
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); 
+
 
         const contactForm = document.getElementById('contact-form');
         const formStatus = document.getElementById('form-status');
@@ -263,9 +307,12 @@
             contactForm.addEventListener('submit', async function (event) {
                 event.preventDefault();
                 const formData = new FormData(contactForm);
-                
-                formStatus.innerHTML = '<p class="form-sending">Sending your message...</p>';
+
+                formStatus.innerHTML = '<p class="form-sending"><i class="fas fa-spinner fa-spin"></i> Sending your message...</p>';
+                formStatus.className = 'form-status form-sending'; // Add base class and status class
                 formStatus.style.display = 'block';
+                formStatus.setAttribute('aria-atomic', 'true');
+
 
                 try {
                     const response = await fetch(contactForm.action, {
@@ -275,20 +322,26 @@
                     });
 
                     if (response.ok) {
-                        formStatus.innerHTML = '<p class="form-success">Thank you! Your message has been sent successfully.</p>';
+                        formStatus.innerHTML = '<p><i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.</p>';
+                         formStatus.className = 'form-status form-success'; // Update status class
                         contactForm.reset();
                     } else {
                         const data = await response.json();
-                        formStatus.innerHTML = `<p class="form-error">Oops! Problem: ${ (data.errors && data.errors.length > 0) ? data.errors.map(e => e.message).join(', ') : 'Submitting form.'}</p>`;
+                        const errorMessage = (data.errors && data.errors.length > 0) ? data.errors.map(e => e.message).join(', ') : 'There was a problem submitting your form.';
+                        formStatus.innerHTML = `<p><i class="fas fa-exclamation-circle"></i> Oops! ${errorMessage}</p>`;
+                         formStatus.className = 'form-status form-error'; // Update status class
                     }
                 } catch (error) {
                     console.error('Form submission error:', error);
-                    formStatus.innerHTML = '<p class="form-error">Oops! An error occurred. Please try again later.</p>';
+                     formStatus.innerHTML = '<p><i class="fas fa-times-circle"></i> Oops! An error occurred. Please try again later.</p>';
+                     formStatus.className = 'form-status form-error'; // Update status class
                 }
+                 // Clear status after a few seconds
                 setTimeout(() => {
                     formStatus.style.display = 'none';
                     formStatus.innerHTML = '';
-                }, 7000);
+                    formStatus.className = 'form-status'; // Reset class
+                }, 7000); // 7 seconds
             });
         }
     </script>
