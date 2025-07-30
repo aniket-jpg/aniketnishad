@@ -9,14 +9,17 @@
 
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="vOfnsTkLyAaA6jZAbqlf7zxF8hUSqrEdX55R8lNjjLg" />
-    <!-- Google Fonts - Poppins -->
+    
+    <!-- Google Fonts - Poppins (Optimized with display=swap) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
     <!-- AOS (Animate On Scroll) Library CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Link to your NEW style.css file -->
+    <!-- Link to your style.css file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,7 +27,7 @@
         <div class="container">
             <div id="logo">
                 <a href="#hero">
-                    <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech Solutions Logo">
+                    <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech Solutions Logo" width="200" height="55">
                 </a>
             </div>
             <nav id="navbar">
@@ -43,10 +46,11 @@
 
     <main>
         <section id="hero">
+            <div class="hero-overlay"></div>
             <div class="hero-content container">
-                <h1 data-aos="fade-up" data-aos-delay="200">Accelerating <span class="highlight">Growth</span> with Proven Web & AI Solutions</h1>
+                <h1 data-aos="fade-up" data-aos-delay="200">Accelerating Growth with <br><span class="highlight" id="typed-headline"></span></h1>
                 <p class="slogan" data-aos="fade-up" data-aos-delay="300"><em>Innovation in every step.</em></p>
-                <p class="subtitle" data-aos="fade-up" data-aos-delay="400">Empowering startups and industries by building end-to-end web solutions, optimizing digital presence, and leveraging AI tools (like safe bulk email senders) to streamline manual processes and fuel sustainable growth.</p>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="400">Empowering startups and industries by building end-to-end web solutions, optimizing digital presence, and leveraging AI tools to streamline manual processes and fuel sustainable growth.</p>
                 <div data-aos="fade-up" data-aos-delay="600" class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Request a Consultation</a>
                     <a href="#services" class="btn btn-secondary">Explore Our Solutions</a>
@@ -60,19 +64,34 @@
                 <p class="section-intro">Delivering tailored technology to enhance your industrial processes, digitize manual workflows, and boost your market reach, with a special focus on empowering startups.</p>
                 <div class="service-grid">
                     <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-                        <h3>Custom Web Applications</h3>
-                        <p>We develop end-to-end custom web applications engineered for factories, startups, and industries. Our solutions streamline your manual processes, provide robust data management, and enhance overall operational efficiency.</p>
+                        <div class="service-card-img-container">
+                            <img src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Custom Web Applications Development" loading="lazy">
+                        </div>
+                        <div class="service-card-content">
+                            <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                            <h3>Custom Web Applications</h3>
+                            <p>We develop end-to-end custom web applications engineered for factories, startups, and industries to streamline your manual processes.</p>
+                        </div>
                     </div>
                     <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-                        <h3>Digital Marketing & Growth</h3>
-                        <p>Boost your digital presence with our strategic digital marketing services. We offer expert social media handling, content creation, and SEO, all designed to elevate your brand and optimize your startup's growth trajectory.</p>
+                        <div class="service-card-img-container">
+                            <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Digital Marketing and Growth Strategy" loading="lazy">
+                        </div>
+                        <div class="service-card-content">
+                            <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                            <h3>Digital Marketing & Growth</h3>
+                            <p>Boost your digital presence with our strategic digital marketing services, including SEO, content creation, and social media management.</p>
+                        </div>
                     </div>
                     <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-icon"><i class="fas fa-cogs"></i></div>
-                        <h3>AI-Powered Process Optimization</h3>
-                        <p>Transform your operations with AI. We implement intelligent solutions, including custom AI tools like safe and legal bulk email senders, advanced data management systems, and workflow automation to optimize your industry processes and significantly boost productivity.</p>
+                        <div class="service-card-img-container">
+                            <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="AI-Powered Process Optimization" loading="lazy">
+                        </div>
+                        <div class="service-card-content">
+                            <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                            <h3>AI-Powered Process Optimization</h3>
+                            <p>Transform your operations with AI. We implement intelligent solutions and workflow automation to significantly boost productivity.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,16 +102,16 @@
                 <div class="about-text" data-aos="fade-right" data-aos-delay="200">
                     <h2 class="section-title-left">About AniFlow Tech: Your IT Growth Partner</h2>
                     <p>AniFlow Tech Solutions is an innovative IT startup passionate about empowering businesses, especially startups and factories, by transforming manual operations into efficient digital processes. We are committed to your success, believing that smart, custom technology solutions are the cornerstone of industrial growth and startup scaling.</p>
-                    <p>Our mission is to deliver bespoke web applications, AI-driven process optimization tools (including secure bulk email systems and robust data management), and impactful digital marketing. We partner with you to understand your unique vision, digitize your workflows, and build powerful, intuitive IT systems that pave the way for future growth and optimized efficiency, particularly for startups looking to scale from manual foundations.</p>
+                    <p>Our mission is to deliver bespoke web applications, AI-driven process optimization tools, and impactful digital marketing. We partner with you to understand your unique vision, digitize your workflows, and build powerful, intuitive IT systems that pave the way for future growth and optimized efficiency.</p>
                     <a href="#contact" class="btn btn-primary-outline">Learn How We Can Help</a>
                 </div>
                 <div class="about-image-container" data-aos="fade-left" data-aos-delay="300">
-                    <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="AniFlow Tech Solutions team collaboration" class="about-img main-img">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D" alt="AniFlow Tech Founder" class="about-img main-img" loading="lazy" width="500" height="250">
                 </div>
             </div>
         </section>
 
-        <section id="why-choose-us" class="section-padding">
+        <section id="why-choose-us" class="section-padding bg-light">
             <div class="container">
                 <h2 class="section-title">Why Partner with AniFlow Tech?</h2>
                 <p class="section-intro">We are more than just a service provider; we are your dedicated partner in innovation and growth.</p>
@@ -127,7 +146,7 @@
             </div>
         </section>
 
-        <section id="contact" class="section-padding bg-light-alt">
+        <section id="contact" class="section-padding">
             <div class="container">
                 <h2 class="section-title">Let's Discuss Your Project</h2>
                 <p class="section-intro">Ready to optimize your processes, enhance your digital footprint, or transform your startup's manual operations? Reach out to our team.</p>
@@ -158,7 +177,6 @@
                         <h3>Contact Details</h3>
                         <p class="founder-detail"><i class="fas fa-user-tie"></i> Founder: Aniket Nishad</p>
                         <p><i class="fas fa-envelope"></i> <a href="mailto:aniket@aniflowtech.com">aniket@aniflowtech.com</a></p>
-                        <p><i class="fas fa-phone"></i> <a href="tel:+918454914776">+91 8454914776</a></p>
                         <p><i class="fas fa-map-marker-alt"></i> Office No- 003, Ashok Nagar Lane,<br>Santacruz East, Mumbai - 400055</p>
                         <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/aniflowtech" target="_blank" rel="noopener noreferrer">aniflowtech</a></p>
                         <div class="map-container">
@@ -180,150 +198,147 @@
 
     <button id="scroll-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
+    <!-- JS Libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    <!-- Your Custom Script -->
     <script>
+        // Initialize AOS (Animate on Scroll)
         AOS.init({
             duration: 800,
-            once: true, // Only animate once as you scroll down
-            easing: 'ease-in-out' // More natural animation
+            once: true,
+            easing: 'ease-in-out'
         });
 
+        // --- Dynamic Headline with Typed.js ---
+        if (document.getElementById('typed-headline')) {
+            const typed = new Typed('#typed-headline', {
+                strings: ['Proven Web Solutions', 'AI-Powered Automation', 'Industrial Growth'],
+                typeSpeed: 60,
+                backSpeed: 30,
+                backDelay: 1500,
+                startDelay: 500,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|',
+            });
+        }
+
+        // --- Mobile Navigation ---
         const menuToggle = document.getElementById('menu-toggle');
         const navbar = document.getElementById('navbar');
         const navLinks = document.querySelectorAll('#navbar ul li a');
         const header = document.getElementById('main-header');
 
-
-        menuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-            if (menuToggle.classList.contains('active')) {
-                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
-                menuToggle.setAttribute('aria-label', 'Close Menu');
-                // Disable scrolling when menu is open
-                document.body.style.overflowY = 'hidden';
-            } else {
+        function toggleMenu(forceClose = false) {
+            const isActive = navbar.classList.contains('active');
+            if (forceClose || isActive) {
+                navbar.classList.remove('active');
+                menuToggle.classList.remove('active');
                 menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
                 menuToggle.setAttribute('aria-label', 'Open Menu');
-                // Re-enable scrolling
                 document.body.style.overflowY = 'auto';
+            } else {
+                navbar.classList.add('active');
+                menuToggle.classList.add('active');
+                menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+                menuToggle.setAttribute('aria-label', 'Close Menu');
+                document.body.style.overflowY = 'hidden';
             }
-        });
+        }
 
+        menuToggle.addEventListener('click', () => toggleMenu());
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (navbar.classList.contains('active')) {
-                    navbar.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                    menuToggle.setAttribute('aria-label', 'Open Menu');
-                     document.body.style.overflowY = 'auto'; // Re-enable scrolling
-                }
-            });
+            link.addEventListener('click', () => toggleMenu(true));
         });
-
-         // Close menu on resize if open
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 768 && navbar.classList.contains('active')) {
-                 navbar.classList.remove('active');
-                 menuToggle.classList.remove('active');
-                 menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                 menuToggle.setAttribute('aria-label', 'Open Menu');
-                 document.body.style.overflowY = 'auto'; // Re-enable scrolling
+            if (window.innerWidth > 768) {
+                toggleMenu(true);
             }
         });
 
-
+        // --- General UI Enhancements ---
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
         const scrollToTopBtn = document.getElementById('scroll-to-top');
         window.addEventListener('scroll', () => {
-            // Show/hide scroll-to-top button
             if (window.pageYOffset > 300) {
                 scrollToTopBtn.classList.add('show');
             } else {
                 scrollToTopBtn.classList.remove('show');
             }
-
-            // Add shadow to header on scroll
             if (window.pageYOffset > 50) {
                 header.classList.add('scrolled');
             } else {
-                 header.classList.remove('scrolled');
+                header.classList.remove('scrolled');
             }
         });
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
+        // --- Counter and Active Nav Link on Scroll ---
         const sections = document.querySelectorAll('section[id]');
         const projectCountElement = document.getElementById('project-count');
         let counterAnimated = false;
 
         function animateCounter(element, target) {
             let current = 0;
-             // Ensure increment is at least 1
-            const increment = Math.max(1, Math.ceil(target / 150)); // Smaller increment, slightly longer animation
-            const intervalTime = 10; // Faster interval
-
+            const duration = 2000;
+            const stepTime = 20;
+            const steps = duration / stepTime;
+            const increment = target / steps;
+            
             if (isNaN(target) || target === 0) {
                 element.textContent = "0+";
                 return;
             }
 
-            const interval = setInterval(() => {
+            const counter = setInterval(() => {
                 current += increment;
                 if (current >= target) {
-                    current = target;
-                    clearInterval(interval);
-                    element.textContent = target + "+";
+                    clearInterval(counter);
+                    element.textContent = Math.round(target) + "+";
                 } else {
-                   element.textContent = current;
+                   element.textContent = Math.round(current);
                 }
-            }, intervalTime);
+            }, stepTime);
         }
 
         function handleScroll() {
-            let scrollY = window.pageYOffset;
+            const scrollY = window.pageYOffset;
             const viewportHeight = window.innerHeight;
 
             sections.forEach(current => {
                 const sectionHeight = current.offsetHeight;
-                // Adjust offset to activate when section is partially visible
-                const sectionTop = current.offsetTop - viewportHeight * 0.5; // Activate when top half is visible
-
+                const sectionTop = current.offsetTop - viewportHeight * 0.5;
                 let sectionId = current.getAttribute('id');
-
                 const navLink = document.querySelector('#navbar a[href*="' + sectionId + '"]');
+
                 if (navLink) {
                     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                        // Remove active class from all nav links first
                         navLinks.forEach(link => link.classList.remove('active-link'));
-                        // Add active class to the current section's nav link
                         navLink.classList.add('active-link');
                     }
                 }
             });
 
-            // Counter animation trigger
             if (projectCountElement && !counterAnimated) {
                 const sectionProjects = document.getElementById('projects');
                 if (sectionProjects) {
-                    // Trigger when the top of the projects section enters the viewport
-                     const sectionTopVisible = sectionProjects.offsetTop - viewportHeight + sectionProjects.offsetHeight * 0.2; // Adjust trigger point
-                     if (scrollY > sectionTopVisible) {
-                        animateCounter(projectCountElement, 100); // Target 100, will show 100+
+                    const sectionTopVisible = sectionProjects.getBoundingClientRect().top;
+                    if (sectionTopVisible < viewportHeight * 0.8) {
+                        animateCounter(projectCountElement, 100);
                         counterAnimated = true;
                     }
                 }
             }
         }
-
-        // Initial call to set active link and counter state on page load
         window.addEventListener('load', handleScroll);
         window.addEventListener('scroll', handleScroll);
 
-
+        // --- Contact Form Submission ---
         const contactForm = document.getElementById('contact-form');
         const formStatus = document.getElementById('form-status');
 
@@ -333,10 +348,9 @@
                 const formData = new FormData(contactForm);
 
                 formStatus.innerHTML = '<p class="form-sending"><i class="fas fa-spinner fa-spin"></i> Sending your message...</p>';
-                formStatus.className = 'form-status form-sending'; // Add base class and status class
+                formStatus.className = 'form-status form-sending';
                 formStatus.style.display = 'block';
-                formStatus.setAttribute('aria-atomic', 'true');
-
+                formStatus.setAttribute('aria-live', 'polite');
 
                 try {
                     const response = await fetch(contactForm.action, {
@@ -347,25 +361,25 @@
 
                     if (response.ok) {
                         formStatus.innerHTML = '<p><i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.</p>';
-                         formStatus.className = 'form-status form-success'; // Update status class
+                        formStatus.className = 'form-status form-success';
                         contactForm.reset();
                     } else {
                         const data = await response.json();
-                        const errorMessage = (data.errors && data.errors.length > 0) ? data.errors.map(e => e.message).join(', ') : 'There was a problem submitting your form.';
+                        const errorMessage = (data.errors && data.errors.map(e => e.message).join(', ')) || 'There was a problem submitting your form.';
                         formStatus.innerHTML = `<p><i class="fas fa-exclamation-circle"></i> Oops! ${errorMessage}</p>`;
-                         formStatus.className = 'form-status form-error'; // Update status class
+                        formStatus.className = 'form-status form-error';
                     }
                 } catch (error) {
                     console.error('Form submission error:', error);
-                     formStatus.innerHTML = '<p><i class="fas fa-times-circle"></i> Oops! An error occurred. Please try again later.</p>';
-                     formStatus.className = 'form-status form-error'; // Update status class
+                    formStatus.innerHTML = '<p><i class="fas fa-times-circle"></i> Oops! An error occurred. Please try again later.</p>';
+                    formStatus.className = 'form-status form-error';
                 }
-                 // Clear status after a few seconds
+
                 setTimeout(() => {
                     formStatus.style.display = 'none';
                     formStatus.innerHTML = '';
-                    formStatus.className = 'form-status'; // Reset class
-                }, 7000); // 7 seconds
+                    formStatus.className = 'form-status';
+                }, 7000);
             });
         }
     </script>
