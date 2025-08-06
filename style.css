@@ -12,6 +12,7 @@
     --shadow-color: rgba(0, 0, 0, 0.08); /* Softer shadow */
     --success-color: #28a745;
     --error-color: #dc3545;
+    --whatsapp-color: #25D366;
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -53,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 2.8rem; }
-h2 { font-size: 2.2rem; }
+h2 { font-size: 2.3rem; font-weight: 700; }
 h3 { font-size: 1.5rem; }
 
 p {
@@ -313,8 +314,8 @@ img {
     font-weight: 300;
 }
 
-/* --- Services Section --- */
-.service-grid {
+/* --- Services & Why Us Sections --- */
+.service-grid, .why-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 35px;
@@ -327,7 +328,7 @@ img {
     text-align: center;
     box-shadow: 0 10px 30px var(--shadow-color);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
-    border-bottom: 5px solid var(--primary-color);
+    border: 1px solid var(--border-color);
     padding: 0;
     overflow: hidden;
     display: flex;
@@ -336,7 +337,8 @@ img {
 
 .service-card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 20px 45px rgba(0, 82, 204, 0.25);
+    box-shadow: 0 20px 45px rgba(0, 82, 204, 0.2);
+    border-color: var(--primary-color);
 }
 .service-card:hover .service-icon i {
     transform: scale(1.15) rotate(8deg);
@@ -386,6 +388,37 @@ img {
     flex-grow: 1;
 }
 
+.why-card {
+    background: var(--bg-color);
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.why-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 18px 40px rgba(0, 82, 204, 0.15);
+    border-color: var(--primary-color);
+}
+.why-card:hover .why-icon i {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.why-icon {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.why-card h3 {
+    color: var(--primary-hover-color);
+    font-size: 1.4rem;
+}
+
 /* --- About Section --- */
 .about-content {
     display: flex;
@@ -406,44 +439,7 @@ img {
 .about-image-container .about-img {
     border-radius: 12px;
     box-shadow: 0 15px 40px var(--shadow-color);
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-}
-
-/* --- Why Choose Us Section --- */
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 2rem;
-}
-
-.why-card {
-    background: var(--bg-color);
-    padding: 35px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.why-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 18px 40px rgba(0, 82, 204, 0.18);
-}
-.why-card:hover .why-icon i {
-    transform: scale(1.1) rotate(-5deg);
-}
-
-.why-icon {
-    font-size: 2.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-.why-card h3 {
-    color: var(--primary-hover-color);
-    font-size: 1.4rem;
+    object-fit: cover;
 }
 
 /* --- Projects Counter Section --- */
@@ -529,31 +525,27 @@ img {
 }
 .contact-info p {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
 }
 .contact-info p i {
     color: var(--primary-color);
     margin-right: 18px;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     width: 28px;
     text-align: center;
-    margin-top: 4px;
+}
+
+.contact-info p i.whatsapp-icon {
+    color: var(--whatsapp-color);
 }
 
 .contact-info p.founder-detail {
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--primary-hover-color);
-    align-items: center;
     margin-bottom: 1.8rem;
-}
-
-.contact-info p.founder-detail i {
-    font-size: 1.4rem;
-    margin-top: 0;
-    color: var(--primary-color);
 }
 
 .map-container {
@@ -677,7 +669,7 @@ img {
 
 /* --- Responsive Design --- */
 @media (max-width: 992px) { /* Tablet */
-    #logo img { max-height: 55px; }
+    #logo img { max-height: 65px; }
     .hero-content h1 { font-size: 3rem; }
     .hero-content .slogan { font-size: 1.4rem; }
     .hero-content .subtitle { font-size: 1.15rem; }
@@ -685,17 +677,18 @@ img {
     .projects-band .section-title.projects-band-title { font-size: 2.2rem; }
     .projects-band .count-number.projects-band-number { font-size: 4rem; }
     .contact-info p.founder-detail { font-size: 1.1rem; }
+    .service-grid, .why-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 }
 
 @media (max-width: 768px) { /* Mobile */
     html { font-size: 15px; }
-    #logo img { max-height: 50px; }
+    #logo img { max-height: 60px; }
     #main-header { padding: 0.8rem 0; }
     
     #navbar {
         display: none; flex-direction: column; width: 100%;
         position: fixed;
-        top: 71px; /* Adjust based on your header height */
+        top: 71px;
         left: 0;
         background-color: var(--bg-color);
         box-shadow: 0 8px 15px var(--shadow-color);
@@ -724,7 +717,6 @@ img {
     .contact-wrapper { flex-direction: column; padding: 30px; }
     .contact-info { text-align: center; }
     .contact-info p { justify-content: center; }
-    .contact-info p.founder-detail { justify-content: center; }
 
     .projects-band .section-title.projects-band-title { font-size: 2rem; }
     .projects-band .count-number.projects-band-number { font-size: 3.5rem; }
@@ -733,12 +725,12 @@ img {
 }
 
 @media (max-width: 480px) { /* Small Mobile */
-    #logo img { max-height: 45px; }
+    #logo img { max-height: 65px; }
     .hero-content h1 { font-size: 2.2rem; }
     .hero-content .slogan { font-size: 1.2rem; }
     .hero-content .subtitle { font-size: 1rem; }
     .btn { padding: 12px 24px; font-size: 0.95rem; }
-    .service-grid { grid-template-columns: 1fr; }
+    .service-grid, .why-grid { grid-template-columns: 1fr; }
     .section-padding { padding: 60px 0; }
     #projects.projects-band { padding: 60px 0; }
 
