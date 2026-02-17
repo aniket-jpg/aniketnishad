@@ -3,40 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniFlow Tech Solutions - IT Solutions for Industrial Growth & Process Streamlining</title>
-    <meta name="description" content="AniFlow Tech Solutions, a startup IT company, specializes in custom web applications for factories and industries, AI-powered process streamlining, data management, and digital marketing to boost your business efficiency and growth. Innovation in every step.">
-    <meta name="keywords" content="startup IT company, custom web applications, process streamlining, factory automation, industrial IT solutions, digital marketing, AI solutions, data management, bulk email sending, startup growth, AniFlow Tech, Aniket Nishad">
+    <title>AniFlow Tech Solutions - Premium WordPress Dev & Industrial IT Solutions</title>
+    <meta name="description" content="AniFlow Tech Solutions: Expert WordPress Development, Custom Web Apps, AI Process Automation, and Digital Marketing. Transforming Startups and Industries with digital innovation.">
+    <meta name="keywords" content="WordPress developer, website design, startup IT company, custom web applications, factory automation, digital marketing, AI solutions, AniFlow Tech, Aniket Nishad">
 
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="vOfnsTkLyAaA6jZAbqlf7zxF8hUSqrEdX55R8lNjjLg" />
     
-    <!-- Google Fonts - Poppins (Optimized with display=swap) -->
+    <!-- Google Fonts - Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS (Animate On Scroll) Library CSS -->
+    <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Link to your style.css file -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Inline Styles for new sections (Merge these into your style.css later) -->
+    <style>
+        /* Tech Stack Ticker */
+        .tech-stack { background: #f8f9fa; padding: 40px 0; overflow: hidden; white-space: nowrap; }
+        .tech-slide { display: inline-block; animation: slide 20s infinite linear; }
+        .tech-item { display: inline-block; margin: 0 30px; font-size: 2.5rem; color: #555; transition: 0.3s; }
+        .tech-item:hover { color: #007bff; transform: scale(1.1); }
+        @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+
+        /* Process Steps */
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 30px; }
+        .process-card { text-align: center; padding: 20px; border: 1px solid #eee; border-radius: 10px; background: #fff; transition: 0.3s; }
+        .process-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .process-step { background: #007bff; color: #fff; width: 40px; height: 40px; border-radius: 50%; line-height: 40px; margin: 0 auto 15px; font-weight: bold; }
+
+        /* Testimonials */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .testimonial-card { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-left: 4px solid #007bff; }
+        .stars { color: #ffc107; margin-bottom: 10px; }
+        
+        /* WordPress Card Highlight */
+        .wp-highlight { border: 2px solid #007bff; background: linear-gradient(to bottom right, #fff, #f0f8ff); }
+    </style>
 </head>
 <body>
     <header id="main-header">
         <div class="container">
             <div id="logo">
                 <a href="#hero">
+                    <!-- Ensure this image URL is correct or replace with local path -->
                     <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech Solutions Logo" width="200" height="55">
                 </a>
             </div>
             <nav id="navbar">
                 <ul>
                     <li><a href="#hero" class="nav-link">Home</a></li>
-                    <li><a href="#services" class="nav-link">Solutions</a></li>
-                    <li><a href="#comprehensive-services" class="nav-link">All Services</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#why-choose-us" class="nav-link">Why Us</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -48,127 +73,184 @@
         <section id="hero">
             <div class="hero-overlay"></div>
             <div class="hero-content container">
-                <h1 data-aos="fade-up" data-aos-delay="200">Accelerating Growth with <br><span class="highlight" id="typed-headline"></span></h1>
-                <p class="slogan" data-aos="fade-up" data-aos-delay="300"><em>Innovation in every step.</em></p>
-                <p class="subtitle" data-aos="fade-up" data-aos-delay="400">Empowering startups and industries by building end-to-end web solutions, optimizing digital presence, and leveraging AI tools to streamline manual processes and fuel sustainable growth.</p>
+                <h1 data-aos="fade-up" data-aos-delay="200">Scale Your Business with <br><span class="highlight" id="typed-headline"></span></h1>
+                <p class="slogan" data-aos="fade-up" data-aos-delay="300"><em>From Concept to Code: Innovation in every step.</em></p>
+                <p class="subtitle" data-aos="fade-up" data-aos-delay="400">Your all-in-one IT partner. We build stunning WordPress websites, custom industrial software, and AI automation tools designed to skyrocket your growth and streamline operations.</p>
                 <div data-aos="fade-up" data-aos-delay="600" class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Request a Consultation</a>
-                    <a href="#services" class="btn btn-secondary">Explore Our Solutions</a>
+                    <a href="#contact" class="btn btn-primary">Start Your Project</a>
+                    <a href="#services" class="btn btn-secondary">View Our Services</a>
                 </div>
+            </div>
+        </section>
+
+        <!-- New Tech Stack Ticker -->
+        <section class="tech-stack">
+            <div class="tech-slide">
+                <div class="tech-item"><i class="fab fa-wordpress"></i> WordPress</div>
+                <div class="tech-item"><i class="fab fa-react"></i> React</div>
+                <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
+                <div class="tech-item"><i class="fab fa-python"></i> Python AI</div>
+                <div class="tech-item"><i class="fab fa-google"></i> Google Cloud</div>
+                <div class="tech-item"><i class="fab fa-aws"></i> AWS</div>
+                <div class="tech-item"><i class="fas fa-database"></i> MongoDB</div>
+                <div class="tech-item"><i class="fab fa-html5"></i> HTML5</div>
+                <!-- Duplicate for seamless loop -->
+                <div class="tech-item"><i class="fab fa-wordpress"></i> WordPress</div>
+                <div class="tech-item"><i class="fab fa-react"></i> React</div>
+                <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
             </div>
         </section>
 
         <section id="services" class="section-padding">
             <div class="container">
                 <h2 class="section-title">Our Core IT Solutions</h2>
-                <p class="section-intro">Delivering tailored technology to enhance your industrial processes, digitize manual workflows, and boost your market reach, with a special focus on empowering startups.</p>
+                <p class="section-intro">Tailored technology to enhance industrial processes and build your digital empire.</p>
+                
                 <div class="service-grid">
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <!-- NEW WORDPRESS CARD -->
+                    <div class="service-card wp-highlight" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-card-img-container">
+                            <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="WordPress Development" loading="lazy">
+                        </div>
+                        <div class="service-card-content">
+                            <div class="service-icon"><i class="fab fa-wordpress-simple"></i></div>
+                            <h3>WordPress Website Design</h3>
+                            <p><strong>Complete Web Solutions:</strong> Custom themes, WooCommerce stores, Elementor editing, and SEO-optimized structures. We build fast, secure, and mobile-responsive websites that convert visitors into customers.</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-card-img-container">
                             <img src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Custom Web Applications Development" loading="lazy">
                         </div>
                         <div class="service-card-content">
                             <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
                             <h3>Custom Web Applications</h3>
-                            <p>We develop end-to-end custom web applications engineered for factories, startups, and industries to streamline your manual processes.</p>
+                            <p>End-to-end custom software engineered for factories and startups. We replace spreadsheets with powerful dashboards and automated systems.</p>
                         </div>
                     </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-card-img-container">
-                            <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Digital Marketing and Growth Strategy" loading="lazy">
-                        </div>
-                        <div class="service-card-content">
-                            <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-                            <h3>Digital Marketing & Growth</h3>
-                            <p>Boost your digital presence with our strategic digital marketing services, including SEO, content creation, and social media management.</p>
-                        </div>
-                    </div>
+
                     <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-card-img-container">
                             <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="AI-Powered Process Optimization" loading="lazy">
                         </div>
                         <div class="service-card-content">
-                            <div class="service-icon"><i class="fas fa-cogs"></i></div>
-                            <h3>AI-Powered Process Optimization</h3>
-                            <p>Transform your operations with AI. We implement intelligent solutions and workflow automation to significantly boost productivity.</p>
+                            <div class="service-icon"><i class="fas fa-robot"></i></div>
+                            <h3>AI & Process Automation</h3>
+                            <p>Transform manual operations with AI. We implement intelligent bots and workflow automation to cut costs and boost productivity.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="comprehensive-services" class="section-padding bg-light-alt">
+        <!-- New Process Section -->
+        <section id="process" class="section-padding bg-light">
             <div class="container">
-                <h2 class="section-title">Our Comprehensive Service Portfolio</h2>
-                <p class="section-intro">Beyond our core solutions, we offer a wide range of services designed to manage your data, streamline operations, and amplify your market presence.</p>
+                <h2 class="section-title">How We Work</h2>
+                <p class="section-intro">Our streamlined 4-step process ensures your project is delivered on time and within budget.</p>
+                <div class="process-grid">
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="process-step">1</div>
+                        <h3>Discovery</h3>
+                        <p>We analyze your requirements, business goals, and current bottlenecks to create a roadmap.</p>
+                    </div>
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="process-step">2</div>
+                        <h3>Design & Strategy</h3>
+                        <p>We craft UI/UX designs and select the best tech stack (WordPress, MERN, AI) for your needs.</p>
+                    </div>
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="process-step">3</div>
+                        <h3>Development</h3>
+                        <p>Our experts build your solution with clean code, ensuring security and speed optimization.</p>
+                    </div>
+                    <div class="process-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="process-step">4</div>
+                        <h3>Launch & Scale</h3>
+                        <p>We deploy your project, provide training, and offer ongoing support to help you grow.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comprehensive-services" class="section-padding">
+            <div class="container">
+                <h2 class="section-title">Comprehensive Service Portfolio</h2>
+                <p class="section-intro">Beyond core development, we offer a wide range of services to manage data and amplify your market presence.</p>
                 <div class="why-grid">
                     <div class="why-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="why-icon"><i class="fas fa-database"></i></div>
-                        <h3>Data Management & Workflow</h3>
-                        <p>We organize your startup’s crucial data and build streamlined workflows to turn information into an actionable asset for growth.</p>
+                        <div class="why-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3>Digital Marketing & SEO</h3>
+                        <p>Boost your digital presence with strategic SEO, content creation, and social media management to rank higher on Google.</p>
                     </div>
                     <div class="why-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="why-icon"><i class="fas fa-inbox"></i></div>
-                        <h3>AniFlow Shoot: Marketing Suite</h3>
-                        <p>Launch powerful outreach campaigns with our specialized Email (AniFlow Shoot) and WhatsApp marketing services to connect with your audience directly.</p>
+                        <h3>AniFlow Shoot: Marketing</h3>
+                        <p>Launch powerful outreach campaigns with our specialized Email (AniFlow Shoot) and WhatsApp marketing services.</p>
                     </div>
                     <div class="why-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="why-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <h3>Mobile & Custom Applications</h3>
-                        <p>From intuitive mobile apps to specific business tools like attendance management systems, we build the applications you need to succeed.</p>
+                        <h3>Mobile App Development</h3>
+                        <p>Native and hybrid mobile apps for Android and iOS, from e-commerce apps to internal attendance management systems.</p>
                     </div>
                     <div class="why-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="why-icon"><i class="fas fa-rocket"></i></div>
                         <h3>Startup Launchpad Kit</h3>
-                        <p>Your all-in-one package to get started: We provide the domain, hosting, SSL certificate, logo design, and a professional website.</p>
+                        <p>Everything you need to start: Domain, Hosting, SSL, Logo Design, and a Professional 5-page Website.</p>
                     </div>
                     <div class="why-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="why-icon"><i class="fab fa-google-drive"></i></div>
-                        <h3>Google Apps Script (GAS) Development</h3>
-                        <p>Automate and enhance your Google Workspace with custom scripts, connecting your tools and saving valuable time on manual tasks.</p>
+                        <h3>Google Apps Automation</h3>
+                        <p>Automate Google Sheets, Docs, and Forms using Apps Script to save hours of manual data entry every week.</p>
                     </div>
                     <div class="why-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="why-icon"><i class="fas fa-palette"></i></div>
-                        <h3>Online Marketing & Branding</h3>
-                        <p>Establish a strong brand identity with professional logo design and boost your visibility with our comprehensive online marketing strategies.</p>
+                        <div class="why-icon"><i class="fas fa-server"></i></div>
+                        <h3>Maintenance & Support</h3>
+                        <p>We don't just build and leave. We offer monthly maintenance packages to keep your website secure and updated.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section-padding">
+        <section id="about" class="section-padding bg-light-alt">
             <div class="container about-content">
                 <div class="about-text" data-aos="fade-right" data-aos-delay="200">
-                    <h2 class="section-title-left">About AniFlow Tech: Your IT Growth Partner</h2>
-                    <p>AniFlow Tech Solutions is an innovative IT startup passionate about empowering businesses, especially startups and factories, by transforming manual operations into efficient digital processes. We are committed to your success, believing that smart, custom technology solutions are the cornerstone of industrial growth and startup scaling.</p>
-                    <p>Our mission is to deliver bespoke web applications, AI-driven process optimization tools, and impactful digital marketing. We partner with you to understand your unique vision, digitize your workflows, and build powerful, intuitive IT systems that pave the way for future growth and optimized efficiency.</p>
-                    <a href="#contact" class="btn btn-primary-outline">Learn How We Can Help</a>
+                    <h2 class="section-title-left">About AniFlow Tech</h2>
+                    <p>AniFlow Tech Solutions is a dynamic IT startup passionate about digital transformation. Whether you are a factory looking to digitize manual logs or a startup needing a high-conversion WordPress website, we are your partners in growth.</p>
+                    <p>We specialize in bridging the gap between complex technology and business needs. Our team, led by Aniket Nishad, combines technical expertise with business acumen to deliver solutions that actually generate ROI.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                        <li><i class="fas fa-check-circle" style="color:#007bff;"></i> Expert Developers & Designers</li>
+                        <li><i class="fas fa-check-circle" style="color:#007bff;"></i> Cost-Effective Solutions for Startups</li>
+                        <li><i class="fas fa-check-circle" style="color:#007bff;"></i> 24/7 Support availability</li>
+                    </ul>
+                    <br>
+                    <a href="#contact" class="btn btn-primary-outline">Get a Free Quote</a>
                 </div>
                 <div class="about-image-container" data-aos="fade-left" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D" alt="AniFlow Tech Team Collaborating" class="about-img main-img" loading="lazy" width="500" height="250">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&q=60&w=3000" alt="AniFlow Tech Team" class="about-img main-img" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <section id="why-choose-us" class="section-padding bg-light">
+        <section id="testimonials" class="section-padding">
             <div class="container">
-                <h2 class="section-title">Why Partner with AniFlow Tech?</h2>
-                <p class="section-intro">We are more than just a service provider; we are your dedicated partner in innovation and growth.</p>
-                <div class="why-grid">
-                    <div class="why-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="why-icon"><i class="fas fa-lightbulb"></i></div>
-                        <h3>Innovative Solutions</h3>
-                        <p>We leverage the latest technologies and creative thinking to solve your most complex challenges.</p>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"AniFlow built our factory management dashboard. It saved us 20 hours of manual work every week. Highly recommended!"</p>
+                        <p><strong>- Industrial Client</strong></p>
                     </div>
-                    <div class="why-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="why-icon"><i class="fas fa-handshake-angle"></i></div>
-                        <h3>Client-Centric Approach</h3>
-                        <p>Your success is our priority. We work closely with you to understand your needs and deliver tailored solutions.</p>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"The WordPress website they designed for my startup is stunning and incredibly fast. Our SEO rankings improved in just 2 months."</p>
+                        <p><strong>- E-commerce Founder</strong></p>
                     </div>
-                    <div class="why-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3>Proven Expertise</h3>
-                        <p>Our team has a track record of delivering successful projects and driving measurable results.</p>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                        <p>"Professional, responsive, and innovative. The team really understood our vision for digital marketing."</p>
+                        <p><strong>- Retail Business Owner</strong></p>
                     </div>
                 </div>
             </div>
@@ -176,11 +258,11 @@
 
         <section id="projects" class="section-padding projects-band">
             <div class="container text-center">
-                <h2 class="section-title projects-band-title">Our Track Record</h2>
+                <h2 class="section-title projects-band-title">Our Impact</h2>
                 <div class="project-counter-item">
-                    <i class="fas fa-check-circle project-icon projects-band-icon"></i>
+                    <i class="fas fa-rocket project-icon projects-band-icon"></i>
                     <div id="project-count" class="count-number projects-band-number">0</div>
-                    <p class="projects-band-text">Projects Successfully Delivered</p>
+                    <p class="projects-band-text">Successful Projects Delivered</p>
                 </div>
             </div>
         </section>
@@ -188,7 +270,7 @@
         <section id="contact" class="section-padding">
             <div class="container">
                 <h2 class="section-title">Let's Discuss Your Project</h2>
-                <p class="section-intro">Ready to optimize your processes, enhance your digital footprint, or transform your startup's manual operations? Reach out to our team.</p>
+                <p class="section-intro">Ready to build your new website or automate your business? Fill out the form below.</p>
                 <div class="contact-wrapper">
                     <div class="contact-form-container" data-aos="fade-right" data-aos-delay="200">
                         <form action="https://formspree.io/f/movdglon" method="POST" id="contact-form">
@@ -201,12 +283,19 @@
                                 <input type="email" id="email_input" name="email" placeholder="Your Email" required>
                             </div>
                             <div class="form-group">
-                                <label for="subject" class="visually-hidden">Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="Subject (e.g., Web App for Factory, Startup Growth)" required>
+                                <label for="service_type" class="visually-hidden">Service Interested In</label>
+                                <select id="service_type" name="service_type" style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;" required>
+                                    <option value="" disabled selected>Select Service Interested In</option>
+                                    <option value="WordPress Website">WordPress Website Design</option>
+                                    <option value="Custom Web App">Custom Web Application</option>
+                                    <option value="Digital Marketing">Digital Marketing / SEO</option>
+                                    <option value="AI Automation">AI & Process Automation</option>
+                                    <option value="Other">Other Inquiry</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="message" class="visually-hidden">Your Message</label>
-                                <textarea id="message" name="message" rows="5" placeholder="Briefly describe your project, current manual processes, or needs" required></textarea>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project requirements..." required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                             <div id="form-status" aria-live="polite"></div>
@@ -216,12 +305,11 @@
                         <h3>Contact Details</h3>
                         <p class="founder-detail"><i class="fas fa-user-tie"></i> Founder: Aniket Nishad</p>
                         <p><i class="fas fa-envelope"></i> <a href="mailto:aniket@aniflowtech.com">aniket@aniflowtech.com</a></p>
-                        <p><i class="fab fa-whatsapp whatsapp-icon"></i> <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></p>
+                        <p><i class="fab fa-whatsapp whatsapp-icon"></i> <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p>
                         <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/aniflowtech" target="_blank" rel="noopener noreferrer">@aniflowtech</a></p>
                         <p><i class="fas fa-map-marker-alt"></i> Office No- 003, Ashok Nagar Lane,<br>Santacruz East, Mumbai - 400055</p>
                         <div class="map-container">
                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.824965996963!2d72.85000000000001!3d19.071000000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzE1LjYiTiA3MsKwNTEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1678886400000!5m2!1sen!2sin" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office Location"></iframe>
-                             <p style="text-align:center; margin-top:5px; font-size:0.9rem;">(Approximate Location Representation)</p>
                         </div>
                     </div>
                 </div>
@@ -231,8 +319,13 @@
 
     <footer id="main-footer">
         <div class="container">
-            <p class="footer-copyright">© <span id="current-year"></span> AniFlow Tech Solutions. Your Partner in IT Innovation & Startup Growth. All Rights Reserved.</p>
+            <p class="footer-copyright">© <span id="current-year"></span> AniFlow Tech Solutions. All Rights Reserved.</p>
             <p class="footer-credits">Designed with <i class="fas fa-heart" style="color: #ff5050;"></i> by AniFlow Tech</p>
+            <div class="social-links-footer" style="margin-top: 10px;">
+                <a href="#" style="color:white; margin:0 10px;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color:white; margin:0 10px;"><i class="fab fa-linkedin"></i></a>
+                <a href="#" style="color:white; margin:0 10px;"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
 
@@ -242,19 +335,19 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     
-    <!-- Your Custom Script -->
+    <!-- Custom Script -->
     <script>
-        // Initialize AOS (Animate on Scroll)
+        // Initialize AOS
         AOS.init({
             duration: 800,
             once: true,
             easing: 'ease-in-out'
         });
 
-        // --- Dynamic Headline with Typed.js ---
+        // --- Updated Dynamic Headline ---
         if (document.getElementById('typed-headline')) {
             const typed = new Typed('#typed-headline', {
-                strings: ['Proven Web Solutions', 'AI-Powered Automation', 'Industrial Growth'],
+                strings: ['WordPress Websites', 'Custom Web Apps', 'Process Automation', 'Digital Marketing'],
                 typeSpeed: 60,
                 backSpeed: 30,
                 backDelay: 1500,
@@ -292,16 +385,11 @@
         navLinks.forEach(link => {
             link.addEventListener('click', () => toggleMenu(true));
         });
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                toggleMenu(true);
-            }
-        });
 
-        // --- General UI Enhancements ---
+        // --- Scroll Handling ---
         document.getElementById('current-year').textContent = new Date().getFullYear();
-
         const scrollToTopBtn = document.getElementById('scroll-to-top');
+        
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 scrollToTopBtn.classList.add('show');
@@ -318,65 +406,35 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // --- Counter and Active Nav Link on Scroll ---
-        const sections = document.querySelectorAll('section[id]');
+        // --- Counter Animation ---
         const projectCountElement = document.getElementById('project-count');
         let counterAnimated = false;
 
         function animateCounter(element, target) {
             let current = 0;
-            const duration = 2000;
-            const stepTime = 20;
-            const steps = duration / stepTime;
-            const increment = target / steps;
-            
-            if (isNaN(target) || target === 0) {
-                element.textContent = "0+";
-                return;
-            }
-
+            const increment = target / 100;
             const counter = setInterval(() => {
                 current += increment;
                 if (current >= target) {
                     clearInterval(counter);
-                    element.textContent = Math.round(target) + "+";
+                    element.textContent = target + "+";
                 } else {
-                   element.textContent = Math.round(current);
+                   element.textContent = Math.ceil(current);
                 }
-            }, stepTime);
+            }, 20);
         }
 
-        function handleScroll() {
-            const scrollY = window.pageYOffset;
-            const viewportHeight = window.innerHeight;
-
-            sections.forEach(current => {
-                const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - viewportHeight * 0.5;
-                let sectionId = current.getAttribute('id');
-                const navLink = document.querySelector('#navbar a[href*="' + sectionId + '"]');
-
-                if (navLink) {
-                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                        navLinks.forEach(link => link.classList.remove('active-link'));
-                        navLink.classList.add('active-link');
-                    }
-                }
-            });
-
-            if (projectCountElement && !counterAnimated) {
-                const sectionProjects = document.getElementById('projects');
-                if (sectionProjects) {
-                    const sectionTopVisible = sectionProjects.getBoundingClientRect().top;
-                    if (sectionTopVisible < viewportHeight * 0.8) {
-                        animateCounter(projectCountElement, 100);
-                        counterAnimated = true;
-                    }
+        // Trigger animations on scroll
+        window.addEventListener('scroll', () => {
+            const sectionProjects = document.getElementById('projects');
+            if (sectionProjects && !counterAnimated) {
+                const sectionTop = sectionProjects.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight * 0.8) {
+                    animateCounter(projectCountElement, 150); // Set target number here
+                    counterAnimated = true;
                 }
             }
-        }
-        window.addEventListener('load', handleScroll);
-        window.addEventListener('scroll', handleScroll);
+        });
 
         // --- Contact Form Submission ---
         const contactForm = document.getElementById('contact-form');
@@ -387,10 +445,9 @@
                 event.preventDefault();
                 const formData = new FormData(contactForm);
 
-                formStatus.innerHTML = '<p class="form-sending"><i class="fas fa-spinner fa-spin"></i> Sending your message...</p>';
+                formStatus.innerHTML = '<p class="form-sending"><i class="fas fa-spinner fa-spin"></i> Sending...</p>';
                 formStatus.className = 'form-status form-sending';
                 formStatus.style.display = 'block';
-                formStatus.setAttribute('aria-live', 'polite');
 
                 try {
                     const response = await fetch(contactForm.action, {
@@ -400,26 +457,19 @@
                     });
 
                     if (response.ok) {
-                        formStatus.innerHTML = '<p><i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.</p>';
+                        formStatus.innerHTML = '<p><i class="fas fa-check-circle"></i> Message Sent! We will contact you soon.</p>';
                         formStatus.className = 'form-status form-success';
                         contactForm.reset();
                     } else {
-                        const data = await response.json();
-                        const errorMessage = (data.errors && data.errors.map(e => e.message).join(', ')) || 'There was a problem submitting your form.';
-                        formStatus.innerHTML = `<p><i class="fas fa-exclamation-circle"></i> Oops! ${errorMessage}</p>`;
+                        formStatus.innerHTML = `<p><i class="fas fa-exclamation-circle"></i> Submission failed.</p>`;
                         formStatus.className = 'form-status form-error';
                     }
                 } catch (error) {
-                    console.error('Form submission error:', error);
-                    formStatus.innerHTML = '<p><i class="fas fa-times-circle"></i> Oops! An error occurred. Please try again later.</p>';
+                    formStatus.innerHTML = '<p><i class="fas fa-times-circle"></i> Network error.</p>';
                     formStatus.className = 'form-status form-error';
                 }
-
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                    formStatus.innerHTML = '';
-                    formStatus.className = 'form-status';
-                }, 7000);
+                
+                setTimeout(() => { formStatus.style.display = 'none'; }, 5000);
             });
         }
     </script>
