@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- THIS IS THE MAGIC LINE THAT FORCES DESKTOP VIEW ON MOBILE -->
+    <meta name="viewport" content="width=1280">
     
     <!-- PRIMARY SEO -->
     <title>Best Website Design & IT Company in Mumbai | AniFlow Tech</title>
@@ -35,7 +36,6 @@
         <div class="container header-container">
             <div id="logo">
                 <a href="#hero">
-                    <!-- Placeholder Text Logo if image fails, but using your image -->
                     <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech Solutions Logo" height="45">
                 </a>
             </div>
@@ -49,9 +49,6 @@
                 </ul>
                 <a href="#contact" class="btn btn-primary nav-btn">Get Started</a>
             </nav>
-            <button id="menu-toggle" aria-label="Toggle Navigation">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>
 
@@ -143,7 +140,7 @@
             </div>
         </section>
 
-        <!-- Portfolio / Case Studies (NEW SECTION) -->
+        <!-- Portfolio / Case Studies -->
         <section id="portfolio" class="section-padding">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
@@ -245,7 +242,7 @@
             </div>
         </section>
 
-        <!-- FAQ Section (NEW SECTION) -->
+        <!-- FAQ Section -->
         <section id="faq" class="section-padding bg-light">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
@@ -274,7 +271,7 @@
                     <div class="faq-item">
                         <button class="faq-question">Will my website be mobile-friendly and SEO optimized? <i class="fas fa-plus"></i></button>
                         <div class="faq-answer">
-                            <p>Absolutely. 100% of the websites we build are fully responsive (look great on phones, tablets, and desktops) and follow technical SEO best practices to help you rank on Google.</p>
+                            <p>Absolutely. 100% of the websites we build are fully responsive and follow technical SEO best practices to help you rank on Google.</p>
                         </div>
                     </div>
                 </div>
@@ -434,28 +431,7 @@
             });
         });
 
-        // 4. Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-toggle');
-        const navBar = document.getElementById('navbar');
-        menuBtn.addEventListener('click', () => {
-            navBar.classList.toggle('active');
-            const icon = menuBtn.querySelector('i');
-            if(navBar.classList.contains('active')){
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-        
-        // Close menu on link click
-        document.querySelectorAll('.nav-link, .nav-btn').forEach(n => n.addEventListener('click', () => {
-            navBar.classList.remove('active');
-            menuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
-        }));
-
-        // 5. FAQ Accordion Logic
+        // 4. FAQ Accordion Logic
         const faqQuestions = document.querySelectorAll('.faq-question');
         faqQuestions.forEach(question => {
             question.addEventListener('click', () => {
@@ -483,7 +459,7 @@
             });
         });
 
-        // 6. Set Year & Form Setup (Kept from your original)
+        // 5. Set Year & Form Setup
         document.getElementById('current-year').textContent = new Date().getFullYear();
         
         const contactForm = document.getElementById('contact-form');
