@@ -16,7 +16,7 @@
     <meta name="geo.position" content="19.0710;72.8500" />
     <meta name="ICBM" content="19.0710, 72.8500" />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts Optimized -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -99,9 +99,9 @@
                 </div>
                 
                 <div class="service-grid">
-                    <!-- Highlighted Service -->
                     <div class="service-card featured-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="card-image">
+                            <!-- Added loading="lazy" for speed -->
                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" alt="WordPress Design" loading="lazy">
                             <div class="card-badge">Most Popular</div>
                         </div>
@@ -150,7 +150,7 @@
                 
                 <div class="portfolio-grid">
                     <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=2564&auto=format&fit=crop" alt="Factory Dashboard">
+                        <img src="https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=2564&auto=format&fit=crop" alt="Factory Dashboard" loading="lazy">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
                                 <span class="tag">Web App Development</span>
@@ -160,7 +160,7 @@
                         </div>
                     </div>
                     <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2370&auto=format&fit=crop" alt="Ecommerce Site">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2370&auto=format&fit=crop" alt="Ecommerce Site" loading="lazy">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
                                 <span class="tag">E-Commerce / SEO</span>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                     <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2370&auto=format&fit=crop" alt="Startup Site">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2370&auto=format&fit=crop" alt="Startup Site" loading="lazy">
                         <div class="portfolio-overlay">
                             <div class="portfolio-content">
                                 <span class="tag">Startup Kit</span>
@@ -220,7 +220,7 @@
             <div class="container about-wrapper">
                 <div class="about-image" data-aos="fade-right">
                     <div class="image-grid">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2370&auto=format&fit=crop" alt="AniFlow Tech Team" class="img-main">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2370&auto=format&fit=crop" alt="AniFlow Tech Team" class="img-main" loading="lazy">
                         <div class="experience-badge">
                             <h3>5+</h3>
                             <p>Years of <br>Excellence</p>
@@ -357,7 +357,7 @@
     <footer id="main-footer">
         <div class="container footer-content">
             <div class="footer-col brand-col">
-                <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech" class="footer-logo">
+                <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech" class="footer-logo" loading="lazy">
                 <p>Innovative digital solutions engineered to scale your business. Proudly built in Mumbai, serving the world.</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/aniflowtech/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -396,98 +396,105 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- JS Libraries -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- JS Libraries (Deferred for Speed) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
     
     <!-- Custom Scripts -->
     <script>
-        // 1. Initialize AOS Animations
-        AOS.init({ duration: 800, once: true, offset: 100 });
-
-        // 2. Typed.js
-        if (document.getElementById('typed-headline')) {
-            new Typed('#typed-headline', {
-                strings: ['Custom Websites.', 'Smart Web Apps.', 'AI Automations.', 'SEO Strategies.'],
-                typeSpeed: 50, backSpeed: 30, backDelay: 2000, loop: true, showCursor: true, cursorChar: '|'
-            });
-        }
-
-        // 3. Sticky Header & Active Nav
-        const header = document.getElementById('main-header');
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) header.classList.add('scrolled');
-            else header.classList.remove('scrolled');
-
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (scrollY >= sectionTop - 150) { current = section.getAttribute('id'); }
-            });
-            navLinks.forEach(link => {
-                link.classList.remove('active-link');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active-link');
+        document.addEventListener('DOMContentLoaded', () => {
+            // Wait for external libraries to load (since they are deferred)
+            setTimeout(() => {
+                // 1. Initialize AOS Animations
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({ duration: 800, once: true, offset: 50 });
                 }
-            });
-        });
 
-        // 4. FAQ Accordion Logic
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
-                
-                faqQuestions.forEach(q => {
-                    if(q !== question) {
-                        q.classList.remove('active');
-                        q.nextElementSibling.style.maxHeight = null;
-                        q.querySelector('i').classList.replace('fa-minus', 'fa-plus');
+                // 2. Typed.js
+                if (document.getElementById('typed-headline') && typeof Typed !== 'undefined') {
+                    new Typed('#typed-headline', {
+                        strings: ['Custom Websites.', 'Smart Web Apps.', 'AI Automations.', 'SEO Strategies.'],
+                        typeSpeed: 50, backSpeed: 30, backDelay: 2000, loop: true, showCursor: true, cursorChar: '|'
+                    });
+                }
+            }, 150);
+
+            // 3. Sticky Header & Active Nav
+            const header = document.getElementById('main-header');
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) header.classList.add('scrolled');
+                else header.classList.remove('scrolled');
+
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY >= sectionTop - 150) { current = section.getAttribute('id'); }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active-link');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active-link');
                     }
                 });
-
-                question.classList.toggle('active');
-                if (question.classList.contains('active')) {
-                    answer.style.maxHeight = answer.scrollHeight + "px";
-                    icon.classList.replace('fa-plus', 'fa-minus');
-                } else {
-                    answer.style.maxHeight = null;
-                    icon.classList.replace('fa-minus', 'fa-plus');
-                }
             });
-        });
 
-        // 5. Set Year & Form Setup
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        const contactForm = document.getElementById('contact-form');
-        const formStatus = document.getElementById('form-status');
-        if(contactForm) {
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                formStatus.innerHTML = '<span style="color:#2563eb;">Sending...</span>';
-                try {
-                    const res = await fetch(contactForm.action, {
-                        method: contactForm.method,
-                        body: new FormData(contactForm),
-                        headers: { 'Accept': 'application/json' }
+            // 4. FAQ Accordion Logic
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('i');
+                    
+                    faqQuestions.forEach(q => {
+                        if(q !== question) {
+                            q.classList.remove('active');
+                            q.nextElementSibling.style.maxHeight = null;
+                            q.querySelector('i').classList.replace('fa-minus', 'fa-plus');
+                        }
                     });
-                    if (res.ok) {
-                        formStatus.innerHTML = '<span style="color:#10b981;">Message sent successfully!</span>';
-                        contactForm.reset();
+
+                    question.classList.toggle('active');
+                    if (question.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                        icon.classList.replace('fa-plus', 'fa-minus');
                     } else {
-                        formStatus.innerHTML = '<span style="color:#ef4444;">Error sending message.</span>';
+                        answer.style.maxHeight = null;
+                        icon.classList.replace('fa-minus', 'fa-plus');
                     }
-                } catch (error) {
-                    formStatus.innerHTML = '<span style="color:#ef4444;">Network error.</span>';
-                }
-                setTimeout(() => formStatus.innerHTML = '', 5000);
+                });
             });
-        }
+
+            // 5. Set Year & Form Setup
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            if(contactForm) {
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    formStatus.innerHTML = '<span style="color:#2563eb;">Sending...</span>';
+                    try {
+                        const res = await fetch(contactForm.action, {
+                            method: contactForm.method,
+                            body: new FormData(contactForm),
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        if (res.ok) {
+                            formStatus.innerHTML = '<span style="color:#10b981;">Message sent successfully!</span>';
+                            contactForm.reset();
+                        } else {
+                            formStatus.innerHTML = '<span style="color:#ef4444;">Error sending message.</span>';
+                        }
+                    } catch (error) {
+                        formStatus.innerHTML = '<span style="color:#ef4444;">Network error.</span>';
+                    }
+                    setTimeout(() => formStatus.innerHTML = '', 5000);
+                });
+            }
+        });
     </script>
 </body>
 </html>
