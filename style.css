@@ -99,24 +99,25 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .header-container { display: flex; justify-content: space-between; align-items: center; height: 80px; } 
 
-/* LOGO FIX (STRICT SIZE TO AVOID MASSIVE BLOW UP) */
+/* LOGO FIX (Strictly contained inside the header) */
 #logo {
     display: flex;
     align-items: center;
+    height: 100%;
 }
+
+#logo a {
+    display: flex;
+    align-items: center;
+}
+
 #logo img {
-    height: 100px !important;  /* Strictly locked height */
-    width: auto !important;    /* Retains correct clean proportions */
-    max-width: 180px;
+    max-height: 45px; /* Fits perfectly within the 80px header with padding */
+    width: auto;
+    max-width: 220px;
     object-fit: contain;
     display: block;
 }
-
-#navbar { display: flex; align-items: center; gap: 30px; } 
-.nav-links { display: flex; gap: 25px; }
-.nav-link { color: var(--text-main); font-weight: 500; font-size: 0.95rem; } 
-.nav-link:hover, .nav-link.active-link { color: var(--primary); }
-
 /* ==========================================================================
    Hero Section
    ========================================================================== */
