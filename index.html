@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- FORCES DESKTOP VIEW ON MOBILE DEVICES -->
-    <meta name="viewport" content="width=1280">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- PRIMARY SEO -->
-    <title>Best Website Design & IT Company in Mumbai | AniFlow Tech</title>
-    <meta name="description" content="Looking for premium website design in Mumbai? AniFlow Tech offers custom WordPress development, web apps, AI automation, and SEO in Santacruz. Get a free quote today.">
-    <meta name="keywords" content="website design in mumbai, wordpress developer mumbai, web design company santacruz, industrial software mumbai, AI automation india, AniFlow Tech">
+    <title>Enterprise ERP, AI & Web Development Company Mumbai | AniFlow Tech</title>
+    <meta name="description" content="AniFlow Tech provides custom ERP solutions (PO, Vendor, Inventory), CRM, AI automation, WhatsApp marketing, and Premium Web Design in Mumbai.">
+    <meta name="keywords" content="ERP system developers mumbai, PO management software, custom CRM development, AI operations automation, WhatsApp marketing agency, web design company santacruz, AniFlow Tech">
+    <link rel="canonical" href="https://yourwebsite.com" />
 
-    <!-- GEO TAGS -->
+    <!-- GEO TAGS (Local SEO) -->
     <meta name="geo.region" content="IN-MH" />
     <meta name="geo.placename" content="Mumbai" />
     <meta name="geo.position" content="19.0710;72.8500" />
     <meta name="ICBM" content="19.0710, 72.8500" />
 
-    <!-- Google Fonts Optimized -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -29,6 +29,32 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- ADVANCED SEO: Local Business & Software Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ITUtility",
+      "name": "AniFlow Tech Solutions",
+      "image": "https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png",
+      "description": "Leading IT firm in Mumbai specializing in Custom ERP, CRM, AI Automation, Web Design, and Digital Marketing.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Office No- 003, Ashok Nagar Lane, Santacruz East",
+        "addressLocality": "Mumbai",
+        "addressRegion": "MH",
+        "postalCode": "400055",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-8454914776",
+      "url": "https://yourwebsite.com",
+      "offers": [
+        { "@type": "Offer", "name": "Custom ERP & Inventory Management" },
+        { "@type": "Offer", "name": "AI Automation for Operations" },
+        { "@type": "Offer", "name": "WhatsApp & Email Marketing" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -39,31 +65,37 @@
                     <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech Solutions Logo">
                 </a>
             </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-btn" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <nav id="navbar">
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-ul">
                     <li><a href="#hero" class="nav-link active-link">Home</a></li>
                     <li><a href="#services" class="nav-link">Solutions</a></li>
-                    <li><a href="#portfolio" class="nav-link">Work</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#erp" class="nav-link">ERP Systems</a></li>
+                    <li><a href="#testimonials" class="nav-link">Feedback</a></li>
+                    <li class="mobile-only"><a href="#contact" class="btn btn-primary btn-block">Get Started</a></li>
                 </ul>
-                <a href="#contact" class="btn btn-primary nav-btn">Get Started</a>
+                <a href="#contact" class="btn btn-primary nav-btn desktop-only">Consult Now</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Sleek Hero Section -->
         <section id="hero">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
                 <div class="hero-text" data-aos="fade-up">
-                    <div class="badge">Mumbai's Top Rated IT Agency</div>
-                    <h1>Empowering Businesses with <br><span class="highlight" id="typed-headline"></span></h1>
-                    <p class="subtitle">Stop relying on manual processes. We engineer high-converting websites, custom web applications, and AI automations that scale your business in the digital age.</p>
+                    <div class="badge"><i class="fas fa-rocket"></i> Mumbai's Elite Software Partner</div>
+                    <h1>Scale Operations with <br><span class="highlight" id="typed-headline"></span></h1>
+                    <p class="subtitle">We build robust ERP systems, intelligent AI workflows, and digital marketing engines that reduce costs and drive revenue for modern enterprises.</p>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Book Free Consultation <i class="fas fa-arrow-right"></i></a>
-                        <a href="#portfolio" class="btn btn-secondary">View Our Work</a>
+                        <a href="#contact" class="btn btn-primary">Start Your Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="#services" class="btn btn-secondary">Explore Services</a>
                     </div>
                 </div>
             </div>
@@ -72,206 +104,138 @@
         <!-- Tech Stack Ticker -->
         <section class="tech-stack">
             <div class="tech-track">
-                <div class="tech-item"><i class="fab fa-wordpress"></i> WordPress</div>
-                <div class="tech-item"><i class="fab fa-react"></i> React.js</div>
-                <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
-                <div class="tech-item"><i class="fab fa-python"></i> Python AI</div>
+                <div class="tech-item"><i class="fab fa-wordpress"></i> CMS & Web</div>
+                <div class="tech-item"><i class="fab fa-react"></i> React ERPs</div>
+                <div class="tech-item"><i class="fab fa-node-js"></i> Node.js Backend</div>
+                <div class="tech-item"><i class="fab fa-python"></i> AI Operations</div>
                 <div class="tech-item"><i class="fab fa-aws"></i> AWS Cloud</div>
-                <div class="tech-item"><i class="fas fa-database"></i> MongoDB</div>
-                <div class="tech-item"><i class="fab fa-figma"></i> Figma UI/UX</div>
+                <div class="tech-item"><i class="fab fa-whatsapp"></i> WhatsApp API</div>
                 <!-- Duplicated for seamless loop -->
-                <div class="tech-item"><i class="fab fa-wordpress"></i> WordPress</div>
-                <div class="tech-item"><i class="fab fa-react"></i> React.js</div>
-                <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
-                <div class="tech-item"><i class="fab fa-python"></i> Python AI</div>
+                <div class="tech-item"><i class="fab fa-wordpress"></i> CMS & Web</div>
+                <div class="tech-item"><i class="fab fa-react"></i> React ERPs</div>
+                <div class="tech-item"><i class="fab fa-node-js"></i> Node.js Backend</div>
+                <div class="tech-item"><i class="fab fa-python"></i> AI Operations</div>
                 <div class="tech-item"><i class="fab fa-aws"></i> AWS Cloud</div>
-                <div class="tech-item"><i class="fas fa-database"></i> MongoDB</div>
-                <div class="tech-item"><i class="fab fa-figma"></i> Figma UI/UX</div>
+                <div class="tech-item"><i class="fab fa-whatsapp"></i> WhatsApp API</div>
             </div>
         </section>
 
-        <!-- Core Solutions -->
-        <section id="services" class="section-padding bg-light">
+        <!-- Specialized ERP Section -->
+        <section id="erp" class="section-padding bg-light">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2>Our Core IT Solutions</h2>
-                    <p>Enterprise-grade technology tailored for startups, retail, and manufacturing sectors.</p>
+                    <h2 class="section-title">Enterprise ERP & Core Systems</h2>
+                    <p>Stop losing money to manual errors. Take full control of your business operations with our custom-built management software.</p>
+                </div>
+                
+                <div class="erp-grid">
+                    <div class="erp-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="erp-icon"><i class="fas fa-file-invoice"></i></div>
+                        <h3>PO & Vendor Management</h3>
+                        <p>Streamline purchase orders, automate vendor approvals, and track supplier performance in one secure dashboard.</p>
+                    </div>
+                    <div class="erp-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="erp-icon"><i class="fas fa-boxes"></i></div>
+                        <h3>Inventory System</h3>
+                        <p>Real-time stock tracking, low-inventory alerts, and multi-warehouse management to prevent stockouts.</p>
+                    </div>
+                    <div class="erp-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="erp-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Financial Management</h3>
+                        <p>Automated invoicing, expense tracking, and deep financial analytics to keep your cash flow healthy.</p>
+                    </div>
+                    <div class="erp-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="erp-icon"><i class="fas fa-users-cog"></i></div>
+                        <h3>Custom CRM</h3>
+                        <p>Track leads, manage client communications, and boost sales team productivity with a tailored CRM.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comprehensive Services Section (Sleek UI) -->
+        <section id="services" class="section-padding">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Digital & Marketing Solutions</h2>
+                    <p>End-to-end technology and marketing services to grow your brand's digital presence.</p>
                 </div>
                 
                 <div class="service-grid">
-                    <div class="service-card featured-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-image">
-                            <!-- Added loading="lazy" for speed -->
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" alt="WordPress Design" loading="lazy">
-                            <div class="card-badge">Most Popular</div>
-                        </div>
-                        <div class="card-body">
-                            <i class="fab fa-wordpress service-icon"></i>
-                            <h3>Premium Web Design</h3>
-                            <p>Lightning-fast, mobile-responsive, and SEO-optimized WordPress websites. Turn visitors into paying customers with high-converting landing pages and e-commerce stores.</p>
-                            <a href="#contact" class="text-link">Learn more <i class="fas fa-chevron-right"></i></a>
-                        </div>
+                    <div class="service-box" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="box-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h4>Premium Web Design</h4>
+                        <p>High-speed, SEO-optimized corporate websites and eCommerce platforms that convert visitors into buyers.</p>
                     </div>
-
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2370&auto=format&fit=crop" alt="Web Applications" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <i class="fas fa-laptop-code service-icon"></i>
-                            <h3>Custom Web Applications</h3>
-                            <p>Replace messy spreadsheets. We build secure, custom CRM systems, inventory dashboards, and internal software using the robust MERN stack.</p>
-                            <a href="#contact" class="text-link">Learn more <i class="fas fa-chevron-right"></i></a>
-                        </div>
+                    <div class="service-box" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="box-icon"><i class="fas fa-brain"></i></div>
+                        <h4>AI Operations Building</h4>
+                        <p>Integrate AI chatbots and operational automation tools to save hundreds of manual hours every month.</p>
                     </div>
-
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2532&auto=format&fit=crop" alt="AI Automation" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <i class="fas fa-brain service-icon"></i>
-                            <h3>AI & Automation</h3>
-                            <p>Automate your workflow. We integrate custom AI chatbots, Google Workspace scripts, and Zapier to save your team hundreds of manual hours every month.</p>
-                            <a href="#contact" class="text-link">Learn more <i class="fas fa-chevron-right"></i></a>
-                        </div>
+                    <div class="service-box" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="box-icon"><i class="fab fa-whatsapp"></i></div>
+                        <h4>WhatsApp Marketing</h4>
+                        <p>Automated WhatsApp broadcast campaigns and API integrations for instant customer engagement.</p>
+                    </div>
+                    <div class="service-box" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="box-icon"><i class="fas fa-envelope-open-text"></i></div>
+                        <h4>Email Campaigns</h4>
+                        <p>Targeted B2B and B2C email marketing sequences designed to nurture leads and drive sales.</p>
+                    </div>
+                    <div class="service-box" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="box-icon"><i class="fas fa-hashtag"></i></div>
+                        <h4>Social Media Engagement</h4>
+                        <p>Data-driven content strategy, brand building, and community management across top social platforms.</p>
+                    </div>
+                    <div class="service-box" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="box-icon"><i class="fas fa-search-dollar"></i></div>
+                        <h4>Advanced SEO</h4>
+                        <p>Technical and local SEO strategies to dominate Google search rankings for your industry keywords.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio / Case Studies -->
-        <section id="portfolio" class="section-padding">
+        <!-- Client Feedback / Testimonials -->
+        <section id="testimonials" class="section-padding bg-dark">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
-                    <h2>Recent Case Studies</h2>
-                    <p>Real results we've delivered for businesses across Mumbai and India.</p>
+                    <h2 class="section-title text-white">Client Feedback</h2>
+                    <p class="text-light-muted">Don't just take our word for it. Here is what our partners say.</p>
                 </div>
                 
-                <div class="portfolio-grid">
-                    <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1661956602116-aa6865609028?q=80&w=2564&auto=format&fit=crop" alt="Factory Dashboard" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <span class="tag">Web App Development</span>
-                                <h3>Industrial ERP Dashboard</h3>
-                                <p>Digitized manual logging for a Palghar manufacturing unit, saving 25+ hours a week.</p>
+                <div class="testimonial-grid">
+                    <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="review-text">"AniFlow Tech built a custom ERP that completely transformed our Vendor and PO management. We cut administrative time by 40% in just two months!"</p>
+                        <div class="client-info">
+                            <div class="avatar">R</div>
+                            <div>
+                                <h5>Rahul Sharma</h5>
+                                <span>Manufacturing Director</span>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2370&auto=format&fit=crop" alt="Ecommerce Site" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <span class="tag">E-Commerce / SEO</span>
-                                <h3>Retail Store Replatforming</h3>
-                                <p>Built a high-speed WooCommerce site for a Bandra boutique, increasing online sales by 140%.</p>
+                    <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="review-text">"The WhatsApp marketing API and CRM integration they did for our real estate firm doubled our lead response rate. Highly professional team."</p>
+                        <div class="client-info">
+                            <div class="avatar">P</div>
+                            <div>
+                                <h5>Priya Desai</h5>
+                                <span>Sales Head</span>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2370&auto=format&fit=crop" alt="Startup Site" loading="lazy">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <span class="tag">Startup Kit</span>
-                                <h3>Fintech Startup Launchpad</h3>
-                                <p>Delivered branding, website, and secure cloud hosting from scratch in just 14 days.</p>
+                    <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="review-text">"Our corporate website went from looking outdated to a modern masterpiece. Their SEO work brought us to page 1 for our top keywords."</p>
+                        <div class="client-info">
+                            <div class="avatar">A</div>
+                            <div>
+                                <h5>Amit Patel</h5>
+                                <span>CEO, TechLogistics</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section id="process" class="section-padding bg-dark text-light">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 class="text-white">Our Proven Process</h2>
-                    <p class="text-light-muted">A transparent, 4-step framework to ensure project success.</p>
-                </div>
-                <div class="process-steps">
-                    <div class="step" data-aos="fade-up" data-aos-delay="100">
-                        <div class="step-number">01</div>
-                        <h4>Discovery</h4>
-                        <p>We analyze your business goals, competitors, and technical requirements to create a roadmap.</p>
-                    </div>
-                    <div class="step" data-aos="fade-up" data-aos-delay="200">
-                        <div class="step-number">02</div>
-                        <h4>Strategy & UI/UX</h4>
-                        <p>We design wireframes and select the best technology stack to ensure scalability and speed.</p>
-                    </div>
-                    <div class="step" data-aos="fade-up" data-aos-delay="300">
-                        <div class="step-number">03</div>
-                        <h4>Development</h4>
-                        <p>Our developers write clean, secure code, building your product with rigorous testing phases.</p>
-                    </div>
-                    <div class="step" data-aos="fade-up" data-aos-delay="400">
-                        <div class="step-number">04</div>
-                        <h4>Launch & Scale</h4>
-                        <p>We deploy the project, train your team, and provide ongoing SEO and maintenance support.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section-padding">
-            <div class="container about-wrapper">
-                <div class="about-image" data-aos="fade-right">
-                    <div class="image-grid">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2370&auto=format&fit=crop" alt="AniFlow Tech Team" class="img-main" loading="lazy">
-                        <div class="experience-badge">
-                            <h3>5+</h3>
-                            <p>Years of <br>Excellence</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text" data-aos="fade-left">
-                    <h2 class="mb-3">Architecting Digital Growth from Mumbai to the World.</h2>
-                    <p>Based in Santacruz, <strong>AniFlow Tech Solutions</strong> is a premium IT agency dedicated to solving complex business problems through modern technology. Founded by Aniket Nishad, our team bridges the gap between design and functionality.</p>
-                    <p>We don't just build websites; we build digital assets that generate revenue. From local retail shops to large-scale manufacturing units, we are your long-term technology partners.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> 100% In-House Expert Developers</li>
-                        <li><i class="fas fa-check"></i> Scalable & Secure Cloud Architectures</li>
-                        <li><i class="fas fa-check"></i> Data-Driven SEO & Marketing</li>
-                        <li><i class="fas fa-check"></i> 24/7 Dedicated Support System</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary mt-3">Partner With Us</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="section-padding bg-light">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Everything you need to know about working with us.</p>
-                </div>
-                <div class="faq-container" data-aos="fade-up" data-aos-delay="100">
-                    <div class="faq-item">
-                        <button class="faq-question">How much does a custom website cost? <i class="fas fa-plus"></i></button>
-                        <div class="faq-answer">
-                            <p>Pricing depends on your requirements. A standard professional WordPress website starts around ₹15,000 - ₹25,000, while complex custom web applications and e-commerce stores are priced based on the features needed. Contact us for a precise quote!</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">Do you provide domain and hosting services? <i class="fas fa-plus"></i></button>
-                        <div class="faq-answer">
-                            <p>Yes! We offer a complete "Startup Launchpad Kit" which includes domain registration, premium high-speed hosting, SSL certificates, and business email setup.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">How long does it take to build a website? <i class="fas fa-plus"></i></button>
-                        <div class="faq-answer">
-                            <p>A standard corporate website takes about 2 to 3 weeks from design to launch. Custom software and large e-commerce platforms can take 4 to 8 weeks depending on the complexity.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">Will my website be mobile-friendly and SEO optimized? <i class="fas fa-plus"></i></button>
-                        <div class="faq-answer">
-                            <p>Absolutely. 100% of the websites we build are fully responsive and follow technical SEO best practices to help you rank on Google.</p>
                         </div>
                     </div>
                 </div>
@@ -283,8 +247,8 @@
             <div class="container">
                 <div class="contact-wrapper glass-panel" data-aos="zoom-in">
                     <div class="contact-info">
-                        <h2>Let's discuss your next project.</h2>
-                        <p>Fill out the form or reach out directly. We usually respond within 2 hours.</p>
+                        <h2>Let's build your system.</h2>
+                        <p>Fill out the form to discuss your ERP, Website, or Marketing requirements. We usually respond within 2 hours.</p>
                         
                         <div class="contact-details mt-4">
                             <div class="detail-item">
@@ -308,13 +272,6 @@
                                     <p><a href="https://wa.me/918454914776" target="_blank">+91 84549 14776</a></p>
                                 </div>
                             </div>
-                            <div class="detail-item">
-                                <div class="icon-box"><i class="fab fa-instagram"></i></div>
-                                <div>
-                                    <h4>Instagram</h4>
-                                    <p><a href="https://www.instagram.com/aniflowtech/" target="_blank">@aniflowtech</a></p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     
@@ -334,15 +291,16 @@
                                 <label for="service_type">Service Required</label>
                                 <select id="service_type" name="service_type" required>
                                     <option value="" disabled selected>Select a service...</option>
-                                    <option value="Website Design">Website Design & Dev</option>
-                                    <option value="Custom Software">Custom Software / App</option>
-                                    <option value="SEO">SEO & Digital Marketing</option>
-                                    <option value="AI Automation">AI & Automation</option>
+                                    <option value="ERP / Software">Custom ERP & Software</option>
+                                    <option value="AI Automation">AI Operations</option>
+                                    <option value="Website Design">Website Design</option>
+                                    <option value="Digital Marketing">WhatsApp/Email/Social Media</option>
+                                    <option value="CRM">CRM Solutions</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="message">Project Details</label>
-                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals..." required></textarea>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your operational challenges..." required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Send Request <i class="fas fa-paper-plane"></i></button>
                             <div id="form-status"></div>
@@ -357,29 +315,30 @@
     <footer id="main-footer">
         <div class="container footer-content">
             <div class="footer-col brand-col">
-                <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech" class="footer-logo" loading="lazy">
-                <p>Innovative digital solutions engineered to scale your business. Proudly built in Mumbai, serving the world.</p>
+                <img src="https://i.ibb.co/PZGZxdm3/Picsart-25-05-22-21-20-54-293-1.png" alt="AniFlow Tech Solutions Logo" class="footer-logo" loading="lazy">
+                <p>Enterprise digital solutions engineered to scale your business operations, automate workflows, and increase revenue.</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/aniflowtech/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/918454914776" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Services</h4>
+                <h4>Core Systems</h4>
                 <ul>
-                    <li><a href="#services">WordPress Design</a></li>
-                    <li><a href="#services">Web Applications</a></li>
-                    <li><a href="#services">SEO & Marketing</a></li>
+                    <li><a href="#erp">ERP Development</a></li>
+                    <li><a href="#erp">PO & Vendor Systems</a></li>
+                    <li><a href="#erp">Inventory Management</a></li>
                     <li><a href="#services">AI Automation</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Company</h4>
+                <h4>Digital Services</h4>
                 <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#portfolio">Our Work</a></li>
-                    <li><a href="#faq">FAQs</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#services">Premium Web Design</a></li>
+                    <li><a href="#services">WhatsApp Marketing</a></li>
+                    <li><a href="#services">Social Media</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -396,30 +355,26 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- JS Libraries (Deferred for Speed) -->
+    <!-- JS Libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js" defer></script>
     
     <!-- Custom Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Wait for external libraries to load (since they are deferred)
             setTimeout(() => {
-                // 1. Initialize AOS Animations
                 if (typeof AOS !== 'undefined') {
-                    AOS.init({ duration: 800, once: true, offset: 50 });
+                    AOS.init({ duration: 800, once: true, offset: 30 });
                 }
-
-                // 2. Typed.js
                 if (document.getElementById('typed-headline') && typeof Typed !== 'undefined') {
                     new Typed('#typed-headline', {
-                        strings: ['Custom Websites.', 'Smart Web Apps.', 'AI Automations.', 'SEO Strategies.'],
-                        typeSpeed: 50, backSpeed: 30, backDelay: 2000, loop: true, showCursor: true, cursorChar: '|'
+                        strings: ['Custom ERP Systems.', 'Smart AI Automations.', 'PO & Vendor software.', 'High-Converting Websites.'],
+                        typeSpeed: 40, backSpeed: 20, backDelay: 2000, loop: true, showCursor: true, cursorChar: '|'
                     });
                 }
             }, 150);
 
-            // 3. Sticky Header & Active Nav
+            // Sticky Header & Active Nav
             const header = document.getElementById('main-header');
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
@@ -441,33 +396,27 @@
                 });
             });
 
-            // 4. FAQ Accordion Logic
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const answer = question.nextElementSibling;
-                    const icon = question.querySelector('i');
-                    
-                    faqQuestions.forEach(q => {
-                        if(q !== question) {
-                            q.classList.remove('active');
-                            q.nextElementSibling.style.maxHeight = null;
-                            q.querySelector('i').classList.replace('fa-minus', 'fa-plus');
-                        }
-                    });
+            // Mobile Menu
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const navUl = document.getElementById('nav-ul');
+            
+            mobileToggle.addEventListener('click', () => {
+                navUl.classList.toggle('show-menu');
+                const icon = mobileToggle.querySelector('i');
+                if (navUl.classList.contains('show-menu')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
 
-                    question.classList.toggle('active');
-                    if (question.classList.contains('active')) {
-                        answer.style.maxHeight = answer.scrollHeight + "px";
-                        icon.classList.replace('fa-plus', 'fa-minus');
-                    } else {
-                        answer.style.maxHeight = null;
-                        icon.classList.replace('fa-minus', 'fa-plus');
-                    }
+            document.querySelectorAll('.nav-links li a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navUl.classList.remove('show-menu');
+                    mobileToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
                 });
             });
 
-            // 5. Set Year & Form Setup
             document.getElementById('current-year').textContent = new Date().getFullYear();
             
             const contactForm = document.getElementById('contact-form');
@@ -483,7 +432,7 @@
                             headers: { 'Accept': 'application/json' }
                         });
                         if (res.ok) {
-                            formStatus.innerHTML = '<span style="color:#10b981;">Message sent successfully!</span>';
+                            formStatus.innerHTML = '<span style="color:#10b981;">Request sent successfully!</span>';
                             contactForm.reset();
                         } else {
                             formStatus.innerHTML = '<span style="color:#ef4444;">Error sending message.</span>';
